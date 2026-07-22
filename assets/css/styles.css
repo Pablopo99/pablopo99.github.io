@@ -1,1 +1,153 @@
 /* Estilos del CV */
+
+/* ==========================================================================
+   1. Tipografias servidas desde el propio proyecto
+   ========================================================================== */
+
+/* Spectral 600: titulares. Subconjunto latin. */
+@font-face {
+  font-family: "Spectral";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/spectral-latin-600.woff2") format("woff2");
+}
+
+/* Libre Franklin variable 400-700: cuerpo, etiquetas y datos. Subconjunto latin. */
+@font-face {
+  font-family: "Libre Franklin";
+  font-style: normal;
+  font-weight: 400 700;
+  font-display: swap;
+  src: url("../fonts/libre-franklin-latin-variable.woff2") format("woff2");
+}
+
+/* ==========================================================================
+   2. Tokens del sistema de diseno
+   ========================================================================== */
+
+:root {
+  color-scheme: light;
+
+  /* Color: azul profundo sobre blanco */
+  --color-fondo: #FFFFFF;        /* Blanco papel */
+  --color-superficie: #F2F5F9;   /* Bruma */
+  --color-texto: #0F2338;        /* Tinta */
+  --color-texto-suave: #4E5F72;  /* Pizarra */
+  --color-acento: #0F4C7A;       /* Azul Villanueva */
+  --color-borde: #CBD4DF;        /* Filete */
+
+  /* Tipografia */
+  --fuente-titulo: "Spectral", ui-serif, Georgia, "Times New Roman", serif;
+  --fuente-cuerpo: "Libre Franklin", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Escala tipografica, de menor a mayor.
+     1 etiquetas y pie, 2 texto secundario, 3 cuerpo,
+     4 subtitulo, 5 titulo de seccion, 6 titular principal */
+  --escala-1: 0.8125rem;
+  --escala-2: 0.9375rem;
+  --escala-3: 1.0625rem;
+  --escala-4: clamp(1.25rem, 1.06rem + 0.8vw, 1.5rem);
+  --escala-5: clamp(1.75rem, 1.4rem + 1.45vw, 2.25rem);
+  --escala-6: clamp(2.5rem, 1.85rem + 2.9vw, 3.75rem);
+
+  /* Espaciado, de menor a mayor. El 8 separa secciones. */
+  --espacio-1: 0.25rem;
+  --espacio-2: 0.5rem;
+  --espacio-3: 0.75rem;
+  --espacio-4: 1rem;
+  --espacio-5: 1.5rem;
+  --espacio-6: 2.5rem;
+  --espacio-7: 4rem;
+  --espacio-8: 7rem;
+
+  /* Medida: columna de texto mas margen de etiquetas */
+  --ancho-maximo: 64rem;
+}
+
+/* Tema oscuro elegido a mano. Solo cambian los tokens de color. */
+:root[data-tema="oscuro"] {
+  color-scheme: dark;
+
+  --color-fondo: #0C1826;        /* Noche */
+  --color-superficie: #132638;   /* Noche elevada */
+  --color-texto: #E9EEF4;        /* Lino */
+  --color-texto-suave: #A6B6C6;  /* Pizarra clara */
+  --color-acento: #8CBCE8;       /* Azul Villanueva claro */
+  --color-borde: #2A3F55;        /* Filete nocturno */
+}
+
+/* Tema oscuro del sistema, salvo que se haya elegido el claro a mano. */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-tema="claro"]) {
+    color-scheme: dark;
+
+    --color-fondo: #0C1826;
+    --color-superficie: #132638;
+    --color-texto: #E9EEF4;
+    --color-texto-suave: #A6B6C6;
+    --color-acento: #8CBCE8;
+    --color-borde: #2A3F55;
+  }
+}
+
+/* ==========================================================================
+   3. Reinicio base
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, figure, blockquote, dl, dd, ul, ol {
+  margin: 0;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--escala-3);
+  line-height: 1.65;
+}
+
+h1, h2, h3 {
+  font-family: var(--fuente-titulo);
+  font-weight: 600;
+  line-height: 1.15;
+  text-wrap: balance;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-acento);
+  outline-offset: 3px;
+}
+
+/* ==========================================================================
+   4. Movimiento reducido
+   ========================================================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
