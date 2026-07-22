@@ -238,7 +238,12 @@ Todo el contenido sale de la sección 6 de la especificación. Los cargos y fech
 
 Cifras que sí pueden publicarse: 50+ sesiones de diagnóstico y 100+ informes revisados con una media de 8 recomendaciones por cliente en AiKit; 180+ hoteles en Expedia; 80+ movilidades de personal y 130.000 € en ayudas en ESIC; adopción de la aplicación del 18 % al 27 % en Payflow; 27 % de crecimiento de la base de usuarios en dos meses en Grupo Gmp.
 
-Cifras que **no** pueden publicarse todavía: el número de estudiantes al año en ESIC (650+ frente a 700+ sin resolver) y el +170 % de Payflow (indicador sin definir). Redactar esas frases sin cifra.
+Cifras confirmadas por Pablo el 22 de julio de 2026, que también se publican:
+
+- ESIC: **+700 estudiantes al año** (queda descartado el 650+ que aparecía en documentos antiguos).
+- Payflow: el **+170 %** es el aumento de contactos diarios por comercial, de 50 a 135 al día, medido como resultado real. Redactarlo explicando la magnitud, nunca como «+170 % de ventas» ni como capacidad potencial.
+
+AiKit está **en Madrid**. El viaje por Asia de agosto de 2025 a febrero de 2026 no se menciona en la web: el hueco entre Expedia y AiKit se deja sin explicación explícita.
 
 Certificaciones, con su nombre exacto: Management Consulting (Emory University, enero de 2026); AI Fundamentals for Non-Data Scientists (University of Pennsylvania, agosto de 2025); Scrum Foundation Professional Certificate SFPC (Certiprof, septiembre de 2025); Curso en transformación y modelo de negocios digitales (Aicad Business School, enero de 2023); Principles of Data Analytics Professionals y Principles of Business Analytics (Microsoft, marzo de 2023); International Leadership and Organizational Behavior (Università Bocconi, septiembre de 2020); Excel Completo (Udemy, octubre de 2022); Cambridge C1 Advanced.
 
@@ -681,7 +686,11 @@ Debe explicar, para alguien que no ha visto el proyecto: cómo arrancar el servi
 
 - [ ] **Paso 2: listar los bloqueantes de publicación**
 
-En el README, una sección con lo que impide publicar, tomada de la sección 7 de la especificación: los estudiantes de ESIC (650+ o 700+), el indicador del +170 % de Payflow, la ubicación de AiKit, la decisión sobre el hueco de agosto de 2025 a febrero de 2026, los CV en PDF sin AiKit, el marcador `EJEMPLO.com` en los metadatos y la fotografía provisional.
+En el README, una sección con lo que todavía impide publicar. Los bloqueantes de datos de la sección 7 de la especificación quedaron resueltos el 22 de julio de 2026 y **no** deben listarse. Los que siguen abiertos son:
+
+- Los CV en PDF de `cv/` no incluyen AiKit; Pablo los está actualizando.
+- La fotografía es provisional hasta que Pablo dé la definitiva.
+- El marcador `EJEMPLO.com` de los metadatos: el sitio se publicará gratis en GitHub Pages con una URL `*.github.io`, pendiente del nombre exacto de usuario y repositorio. No se compra dominio propio.
 
 - [ ] **Paso 3: commit**
 
