@@ -192,7 +192,10 @@ testimonios, línea temporal interactiva, FAQ y logotipos de empresas.
 
 ## 11. Criterios de aceptación
 
-1. La página se abre desde el disco y funciona sin servidor ni compilación.
+1. El sitio no requiere compilación ni instalación de dependencias: se publica
+   subiendo la carpeta tal cual. La vista previa local se hace con el servidor
+   incluido en `tools/servir.mjs`, necesario porque el navegador bloquea la lectura
+   del archivo de traducciones bajo el protocolo `file://`.
 2. Con JavaScript desactivado, todo el contenido en español sigue siendo legible.
 3. El conmutador ES/EN traduce la página completa y recuerda la elección.
 4. El conmutador de tema funciona en ambos sentidos y respeta la preferencia del sistema.
