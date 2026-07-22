@@ -159,10 +159,14 @@ de la antigua lista de pendientes.
 - **Formación académica**, en **ESIC Business & Marketing School** (donde estudió;
   entonces adscrita a la Universidad Rey Juan Carlos, hoy independiente y donde
   después trabajó como ESIC University):
-  - Grado en Administración de Empresas en el Entorno Digital
-    (*Business Administration in a Digital Environment*).
-  - Título Superior en Gestión de Marketing Global.
-  - Los años de ambas titulaciones siguen sin confirmar: se publican sin fechas.
+  - Grado en Administración de Empresas en el Entorno Digital, **2017 – 2022**.
+    En inglés, tal como figura en LinkedIn: *Bachelor's Degree in Digital
+    Business*, o en su forma larga *Bachelor's Degree in Business
+    Administration and Management in the Digital Environment*.
+  - Título Superior en Gestión de Marketing Global, **sept. 2017 – jun. 2022**.
+    En inglés: *Higher Degree in Global Marketing Management*.
+  - Ambas son de **programa bilingüe** y se cursaron **en paralelo**. Fechas
+    confirmadas con la captura de LinkedIn del 22 de julio de 2026.
 - **Resumen profesional** en palabras del propio Pablo, base autorizada para
   redactar el perfil en ambos idiomas:
 
@@ -178,13 +182,12 @@ de la antigua lista de pendientes.
 Ningún dato de esta lista se publica hasta que Pablo lo confirme. Si sigue sin
 resolverse, la frase correspondiente se publica sin cifra.
 
-1. **Años de las dos titulaciones de ESIC**: sin confirmar; se publican sin fechas.
-2. **AiKit**: si existe alguna cláusula de confidencialidad aplicable. Mientras no
+1. **AiKit**: si existe alguna cláusula de confidencialidad aplicable. Mientras no
    se resuelva, no se publica ningún dato de clientes concretos ni de su segmento.
-3. **CV en PDF**: los actuales no incluyen AiKit. Deben actualizarse antes del
+2. **CV en PDF**: los actuales no incluyen AiKit. Deben actualizarse antes del
    lanzamiento.
-4. **Fotografía**: se usa la del CV antiguo de forma provisional.
-5. **URL de publicación**: GitHub Pages `*.github.io`, pendiente del nombre exacto
+3. **Fotografía**: se usa la del CV antiguo de forma provisional.
+4. **URL de publicación**: GitHub Pages `*.github.io`, pendiente del nombre exacto
    de usuario y repositorio. No se compra dominio propio.
 
 ## 8. Dirección visual

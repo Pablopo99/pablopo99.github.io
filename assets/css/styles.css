@@ -583,6 +583,26 @@ html {
   margin-top: var(--espacio-1);
 }
 
+.titulaciones li {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 var(--espacio-2);
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+.titulaciones__fecha {
+  font-size: var(--escala-1);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.formacion__nota {
+  margin-top: var(--espacio-2);
+  font-size: var(--escala-1);
+  color: var(--color-texto-suave);
+}
+
 .certificados {
   display: grid;
   gap: var(--espacio-4);
