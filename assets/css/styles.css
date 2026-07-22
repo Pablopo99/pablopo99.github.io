@@ -681,3 +681,26 @@ html {
   gap: var(--espacio-3);
   margin-top: var(--espacio-5);
 }
+
+/* Direccion ensamblada por JavaScript junto a la etiqueta "Escribeme". */
+.contacto__correo-direccion {
+  color: var(--color-texto-suave);
+}
+
+/* ==========================================================================
+   15. Revelado al hacer scroll
+   ========================================================================== */
+
+/* Sin JavaScript no existe la clase "js" en <html>: el contenido se ve
+   entero desde el principio, sin depender de que un IntersectionObserver
+   llegue a ejecutarse. */
+html.js [data-revelar] {
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+html.js [data-revelar].es-visible {
+  opacity: 1;
+  transform: none;
+}

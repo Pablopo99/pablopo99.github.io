@@ -6,15 +6,22 @@
   <title data-i18n="global.titulo">Pablo Cansinos — Consultoría, Estrategia y Gestión de Proyectos</title>
   <link rel="stylesheet" href="assets/css/styles.css">
   <script>
-    // Reduce el destello del idioma anterior mientras carga la traduccion:
-    // fija el atributo lang lo antes posible, de forma sincrona y sin red.
-    // No evita el destello del texto (eso exigiria bloquear en el fetch de
-    // la traduccion o duplicarla en el HTML, ambas cosas descartadas).
+    // Reduce el destello del idioma y el tema anteriores mientras carga la
+    // pagina: fija lang y data-tema lo antes posible, de forma sincrona y
+    // sin red. No evita el destello del texto traducido (eso exigiria
+    // bloquear en el fetch de la traduccion o duplicarla en el HTML, ambas
+    // cosas descartadas).
     (function () {
       try {
         if (localStorage.getItem('idioma') === 'en') document.documentElement.lang = 'en';
       } catch (error) {
         /* localStorage no disponible: se mantiene el idioma por defecto */
+      }
+      try {
+        const tema = localStorage.getItem('tema');
+        if (tema) document.documentElement.dataset.tema = tema;
+      } catch (error) {
+        /* localStorage no disponible: se mantiene el tema del sistema */
       }
     })();
   </script>
@@ -51,7 +58,7 @@
           </button>
         </div>
 
-        <button class="conmutador__boton conmutador__boton--tema" type="button" data-conmutar-tema>
+        <button class="conmutador__boton conmutador__boton--tema" type="button" data-conmutar-tema aria-pressed="false">
           <span aria-hidden="true">◐</span>
           <span class="visualmente-oculto" data-i18n="tema.conmutar">Cambiar entre tema claro y oscuro</span>
         </button>
@@ -84,7 +91,7 @@
     <!-- ==================================================================
          2. Perfil
          ================================================================== -->
-    <section class="seccion" id="perfil" aria-labelledby="perfil-titulo">
+    <section class="seccion" id="perfil" aria-labelledby="perfil-titulo" data-revelar>
       <div class="seccion__etiqueta">
         <h2 class="seccion__titulo" id="perfil-titulo" data-i18n="perfil.titulo">Perfil</h2>
       </div>
@@ -99,7 +106,7 @@
     <!-- ==================================================================
          3. Áreas de especialización
          ================================================================== -->
-    <section class="seccion" id="areas" aria-labelledby="areas-titulo">
+    <section class="seccion" id="areas" aria-labelledby="areas-titulo" data-revelar>
       <div class="seccion__etiqueta">
         <h2 class="seccion__titulo" id="areas-titulo" data-i18n="areas.titulo">Áreas de especialización</h2>
       </div>
@@ -128,7 +135,7 @@
     <!-- ==================================================================
          4. Trayectoria
          ================================================================== -->
-    <section class="seccion" id="trayectoria" aria-labelledby="trayectoria-titulo">
+    <section class="seccion" id="trayectoria" aria-labelledby="trayectoria-titulo" data-revelar>
       <div class="seccion__etiqueta">
         <h2 class="seccion__titulo" id="trayectoria-titulo" data-i18n="trayectoria.titulo">Trayectoria</h2>
       </div>
@@ -198,7 +205,7 @@
     <!-- ==================================================================
          5. Formación y certificaciones
          ================================================================== -->
-    <section class="seccion" id="formacion" aria-labelledby="formacion-titulo">
+    <section class="seccion" id="formacion" aria-labelledby="formacion-titulo" data-revelar>
       <div class="seccion__etiqueta">
         <h2 class="seccion__titulo" id="formacion-titulo" data-i18n="formacion.titulo">Formación y certificaciones</h2>
       </div>
@@ -282,7 +289,7 @@
     <!-- ==================================================================
          6. Idiomas y experiencia internacional
          ================================================================== -->
-    <section class="seccion" id="idiomas" aria-labelledby="idiomas-titulo">
+    <section class="seccion" id="idiomas" aria-labelledby="idiomas-titulo" data-revelar>
       <div class="seccion__etiqueta">
         <h2 class="seccion__titulo" id="idiomas-titulo" data-i18n="idiomas.titulo">Idiomas y experiencia internacional</h2>
       </div>
@@ -308,14 +315,14 @@
     <!-- ==================================================================
          7. Contacto
          ================================================================== -->
-    <section class="seccion seccion--ultima" id="contacto" aria-labelledby="contacto-titulo">
+    <section class="seccion seccion--ultima" id="contacto" aria-labelledby="contacto-titulo" data-revelar>
       <div class="seccion__etiqueta">
         <h2 class="seccion__titulo" id="contacto-titulo" data-i18n="contacto.titulo">Contacto</h2>
       </div>
       <div class="seccion__cuerpo">
         <p class="parrafo-destacado" data-i18n="contacto.texto">Si buscas a alguien para un puesto de consultoría, estrategia, operaciones o proyectos, escríbeme y lo hablamos.</p>
         <ul class="contacto">
-          <li><a class="contacto__correo" href="#contacto" data-i18n="contacto.escribeme">Escríbeme</a></li>
+          <li><a class="contacto__correo" href="#contacto" data-correo="cansinospablo|gmail.com"><span data-i18n="contacto.escribeme">Escríbeme</span></a></li>
           <li><a href="https://www.linkedin.com/in/pablo-cansinos-17b56214a" target="_blank" rel="noopener noreferrer" data-i18n="contacto.linkedin">Perfil de LinkedIn</a></li>
           <li data-i18n="contacto.ubicacion">Madrid, España</li>
         </ul>

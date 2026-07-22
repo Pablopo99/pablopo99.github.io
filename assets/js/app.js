@@ -1,5 +1,10 @@
 // Aplicacion del CV
 
+// Marca que JavaScript esta activo. El revelado al hacer scroll (mas abajo)
+// solo aplica su estado inicial oculto cuando esta clase esta presente en
+// <html>, asi el contenido se ve completo si este script no llega a correr.
+document.documentElement.classList.add('js');
+
 // ---------------------------------------------------------------------------
 // Idioma
 // ---------------------------------------------------------------------------
@@ -108,5 +113,94 @@ for (const boton of document.querySelectorAll('[data-idioma]')) {
 window.cambiarIdioma = cambiarIdioma;
 
 // ---------------------------------------------------------------------------
-// Tema, correo protegido y revelado al hacer scroll: pendiente (Tarea 5).
+// Tema
 // ---------------------------------------------------------------------------
+
+function leerTemaGuardado() {
+  try {
+    return localStorage.getItem('tema');
+  } catch (error) {
+    console.warn('No se pudo leer el tema guardado.', error);
+    return null;
+  }
+}
+
+function guardarTema(tema) {
+  try {
+    localStorage.setItem('tema', tema);
+  } catch (error) {
+    console.warn('No se pudo guardar el tema elegido.', error);
+  }
+}
+
+// Oscuro esta activo si se eligio a mano, o si no se ha elegido nada y el
+// sistema prefiere oscuro (mismo criterio que el CSS de la Tarea 2).
+function oscuroActivo() {
+  return document.documentElement.dataset.tema === 'oscuro'
+    || (!document.documentElement.dataset.tema
+        && matchMedia('(prefers-color-scheme: dark)').matches);
+}
+
+function sincronizarBotonTema() {
+  document.querySelector('[data-conmutar-tema]')
+    ?.setAttribute('aria-pressed', String(oscuroActivo()));
+}
+
+const temaGuardado = leerTemaGuardado();
+if (temaGuardado) document.documentElement.dataset.tema = temaGuardado;
+// El script en linea del <head> ya adelanto data-tema de forma sincrona para
+// evitar el destello; esto reafirma el mismo valor y, sobre todo, deja el
+// boton con el aria-pressed correcto ya en la carga inicial.
+sincronizarBotonTema();
+
+document.querySelector('[data-conmutar-tema]')?.addEventListener('click', () => {
+  const nuevo = oscuroActivo() ? 'claro' : 'oscuro';
+  document.documentElement.dataset.tema = nuevo;
+  guardarTema(nuevo);
+  sincronizarBotonTema();
+});
+
+// ---------------------------------------------------------------------------
+// Correo protegido
+// ---------------------------------------------------------------------------
+
+// El enlace de contacto lleva data-i18n en un nodo hijo (el texto "Escribeme"
+// / "Get in touch"), no en el propio <a>. Asi cambiarIdioma() puede reescribir
+// ese hijo en cada cambio de idioma sin tocar el nodo de la direccion que
+// anadimos aqui, que vive aparte y no lleva data-i18n.
+function protegerCorreo() {
+  for (const enlace of document.querySelectorAll('[data-correo]')) {
+    const [usuario, dominio] = enlace.dataset.correo.split('|');
+    const direccion = `${usuario}@${dominio}`;
+    enlace.href = `mailto:${direccion}`;
+
+    let nodoDireccion = enlace.querySelector('.contacto__correo-direccion');
+    if (!nodoDireccion) {
+      nodoDireccion = document.createElement('span');
+      nodoDireccion.className = 'contacto__correo-direccion';
+      enlace.append(document.createTextNode(' '), nodoDireccion);
+    }
+    nodoDireccion.textContent = direccion;
+  }
+}
+
+protegerCorreo();
+
+// ---------------------------------------------------------------------------
+// Revelado al hacer scroll
+// ---------------------------------------------------------------------------
+
+const prefiereMenosMovimiento = matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!prefiereMenosMovimiento && 'IntersectionObserver' in window) {
+  const observador = new IntersectionObserver((entradas) => {
+    for (const entrada of entradas) {
+      if (entrada.isIntersecting) {
+        entrada.target.classList.add('es-visible');
+        observador.unobserve(entrada.target);
+      }
+    }
+  }, { rootMargin: '0px 0px -10% 0px' });
+  for (const seccion of document.querySelectorAll('[data-revelar]')) observador.observe(seccion);
+} else {
+  for (const seccion of document.querySelectorAll('[data-revelar]')) seccion.classList.add('es-visible');
+}
