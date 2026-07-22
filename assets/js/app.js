@@ -55,9 +55,14 @@ export async function cambiarIdioma(codigo) {
   try {
     traducciones = await cargarTraducciones(codigo);
   } catch (error) {
-    // El idioma que se ve en pantalla no ha cambiado: los botones deben
-    // seguir reflejando idiomaActual, no el codigo que se intento cargar.
+    // El idioma que se ve en pantalla no ha cambiado: los botones y el
+    // atributo lang deben seguir reflejando idiomaActual, no el codigo que
+    // se intento cargar. Restaurar lang es imprescindible porque el script
+    // en linea de index.html lo adelanta a "en" antes de saber si la
+    // traduccion va a cargar; sin esto quedaria anunciando ingles sobre un
+    // texto en espanol, que un lector de pantalla leeria mal.
     console.error(`No se pudo cambiar al idioma "${codigo}".`, error);
+    document.documentElement.lang = idiomaActual;
     sincronizarBotones(idiomaActual);
     return;
   }
