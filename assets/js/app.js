@@ -90,15 +90,39 @@ export async function cambiarIdioma(codigo) {
   // El estado accesible se actualiza siempre, pase lo que pase con la
   // persistencia en localStorage (que puede fallar y no debe romper nada).
   sincronizarBotones(codigo);
+  actualizarDescargaCv(codigo);
   guardarIdioma(codigo);
+}
+
+// El boton de descarga del inicio ofrece un unico CV: debe apuntar al del
+// idioma que se esta viendo. La seccion de contacto ofrece los dos por
+// separado y no lleva esta marca.
+function actualizarDescargaCv(codigo) {
+  const archivo = codigo === 'en'
+    ? 'cv/Pablo_Cansinos_CV_EN.pdf'
+    : 'cv/Pablo_Cansinos_CV_ES.pdf';
+  for (const enlace of document.querySelectorAll('[data-cv-idioma]')) {
+    enlace.href = archivo;
+  }
+}
+
+// El idioma de la URL (?lang=en) tiene prioridad sobre el guardado: asi el
+// enlace hreflang y los que se comparten en ingles aterrizan en ingles.
+function leerIdiomaUrl() {
+  try {
+    const lang = new URLSearchParams(location.search).get('lang');
+    return lang === 'es' || lang === 'en' ? lang : null;
+  } catch (error) {
+    return null;
+  }
 }
 
 guardarTextosOriginales();
 
-const idiomaGuardado = leerIdiomaGuardado() ?? IDIOMA_POR_DEFECTO;
-if (idiomaGuardado !== IDIOMA_POR_DEFECTO) {
-  cambiarIdioma(idiomaGuardado).catch((error) => {
-    console.error('No se pudo aplicar el idioma guardado.', error);
+const idiomaInicial = leerIdiomaUrl() ?? leerIdiomaGuardado() ?? IDIOMA_POR_DEFECTO;
+if (idiomaInicial !== IDIOMA_POR_DEFECTO) {
+  cambiarIdioma(idiomaInicial).catch((error) => {
+    console.error('No se pudo aplicar el idioma inicial.', error);
   });
 }
 

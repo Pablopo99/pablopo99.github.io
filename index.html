@@ -35,9 +35,11 @@
     // cosas descartadas).
     (function () {
       try {
-        if (localStorage.getItem('idioma') === 'en') document.documentElement.lang = 'en';
+        var url = new URLSearchParams(location.search).get('lang');
+        var idioma = url === 'es' || url === 'en' ? url : localStorage.getItem('idioma');
+        if (idioma === 'en') document.documentElement.lang = 'en';
       } catch (error) {
-        /* localStorage no disponible: se mantiene el idioma por defecto */
+        /* localStorage o URL no disponibles: se mantiene el idioma por defecto */
       }
       try {
         const tema = localStorage.getItem('tema');
@@ -100,7 +102,7 @@
         <p class="inicio__propuesta" data-i18n="inicio.propuesta">Consultor en Madrid. Diagnóstico de negocio, adopción de inteligencia artificial y gestión de proyectos internacionales.</p>
         <p class="inicio__acciones">
           <a class="boton" href="#contacto" data-i18n="inicio.contacto">Hablemos</a>
-          <a class="boton boton--secundario" href="cv/Pablo_Cansinos_CV_ES.pdf" download data-i18n="inicio.descargar">Descargar CV en PDF</a>
+          <a class="boton boton--secundario" href="cv/Pablo_Cansinos_CV_ES.pdf" download data-cv-idioma data-i18n="inicio.descargar">Descargar CV en PDF</a>
         </p>
       </div>
       <figure class="inicio__retrato">
