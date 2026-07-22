@@ -141,22 +141,51 @@ Los certificados de Google Analytics y Data Studio caducaron en enero y febrero 
 Looker Studio siguen apareciendo como herramientas conocidas, sin atribuirles
 certificación vigente.
 
+### Datos confirmados por Pablo el 22 de julio de 2026
+
+Estos datos son tan autorizados como la tabla anterior y resuelven varios puntos
+de la antigua lista de pendientes.
+
+- **ESIC**: **+700 estudiantes** internacionales al año. Queda descartado el 650+.
+- **Payflow**: el **+170 %** es el aumento de contactos diarios por comercial, de
+  **50 a 135 al día**, medido como resultado real, no como capacidad potencial.
+  No se redacta nunca como «+170 % de ventas» ni como crecimiento de usuarios.
+- **AiKit**: está en **Madrid**. Pablo no quiere poner el énfasis en que sus
+  clientes sean pymes: la web habla de «empresas», sin segmentar por tamaño.
+- **Hueco de ago. 2025 a feb. 2026** (viaje por Asia): **no se menciona** en la
+  web. El hueco entre Expedia y AiKit se deja sin explicación explícita.
+- **LinkedIn**: `https://www.linkedin.com/in/pablo-cansinos-17b56214a` es correcta.
+- **Grupo Gmp**: fue en **Madrid**.
+- **Formación académica**, en **ESIC Business & Marketing School** (donde estudió;
+  entonces adscrita a la Universidad Rey Juan Carlos, hoy independiente y donde
+  después trabajó como ESIC University):
+  - Grado en Administración de Empresas en el Entorno Digital
+    (*Business Administration in a Digital Environment*).
+  - Título Superior en Gestión de Marketing Global.
+  - Los años de ambas titulaciones siguen sin confirmar: se publican sin fechas.
+- **Resumen profesional** en palabras del propio Pablo, base autorizada para
+  redactar el perfil en ambos idiomas:
+
+  > Business professional with experience in AI strategy consulting, business
+  > analysis, process improvement and project management. At AiKit, I help
+  > companies to understand their operations, identify pain points and translate
+  > business needs into practical recommendations involving AI, automation and
+  > digital tools. My background also includes partner performance analysis,
+  > international project and stakeholder management.
+
 ## 7. Datos pendientes de confirmar
 
 Ningún dato de esta lista se publica hasta que Pablo lo confirme. Si sigue sin
 resolverse, la frase correspondiente se publica sin cifra.
 
-1. **ESIC**: ¿650+ o 700+ estudiantes internacionales al año?
-2. **Payflow**: qué indicador exacto mejoró un 170 %. El CV en inglés dice
-   «user growth»; el traspaso lo deja ambiguo entre comunicación y adquisición.
-3. **AiKit**: ubicación que debe publicarse.
-4. **AiKit**: qué información puede mostrarse públicamente y si existe alguna
-   cláusula de confidencialidad aplicable.
-5. **Hueco de ago. 2025 a feb. 2026** (viaje por Asia): decisión aplazada. Se deja
-   sin mencionar por ahora; hay que retomarlo antes de publicar.
-6. **CV en PDF**: los actuales no incluyen AiKit. Deben actualizarse antes del
+1. **Años de las dos titulaciones de ESIC**: sin confirmar; se publican sin fechas.
+2. **AiKit**: si existe alguna cláusula de confidencialidad aplicable. Mientras no
+   se resuelva, no se publica ningún dato de clientes concretos ni de su segmento.
+3. **CV en PDF**: los actuales no incluyen AiKit. Deben actualizarse antes del
    lanzamiento.
-7. **Fotografía**: se usa la del CV antiguo de forma provisional.
+4. **Fotografía**: se usa la del CV antiguo de forma provisional.
+5. **URL de publicación**: GitHub Pages `*.github.io`, pendiente del nombre exacto
+   de usuario y repositorio. No se compra dominio propio.
 
 ## 8. Dirección visual
 
