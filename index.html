@@ -3,8 +3,21 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Pablo Cansinos — Consultoría, Estrategia y Gestión de Proyectos</title>
+  <title data-i18n="global.titulo">Pablo Cansinos — Consultoría, Estrategia y Gestión de Proyectos</title>
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    // Reduce el destello del idioma anterior mientras carga la traduccion:
+    // fija el atributo lang lo antes posible, de forma sincrona y sin red.
+    // No evita el destello del texto (eso exigiria bloquear en el fetch de
+    // la traduccion o duplicarla en el HTML, ambas cosas descartadas).
+    (function () {
+      try {
+        if (localStorage.getItem('idioma') === 'en') document.documentElement.lang = 'en';
+      } catch (error) {
+        /* localStorage no disponible: se mantiene el idioma por defecto */
+      }
+    })();
+  </script>
 </head>
 <body>
   <a class="saltar" href="#contenido" data-i18n="global.saltar">Saltar al contenido</a>
