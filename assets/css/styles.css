@@ -572,6 +572,17 @@ html {
   font-weight: 600;
 }
 
+.titulaciones {
+  margin: var(--espacio-2) 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--color-texto-suave);
+}
+
+.titulaciones li + li {
+  margin-top: var(--espacio-1);
+}
+
 .certificados {
   display: grid;
   gap: var(--espacio-4);
