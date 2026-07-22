@@ -141,6 +141,21 @@ Los certificados de Google Analytics y Data Studio caducaron en enero y febrero 
 Looker Studio siguen apareciendo como herramientas conocidas, sin atribuirles
 certificación vigente.
 
+### Cifras publicables por experiencia
+
+Métricas verificadas que acompañan a cada puesto en la web. Se recogen aquí para
+que esta sección sea la fuente de verdad única del contenido:
+
+- **AiKit**: 50+ sesiones de diagnóstico y 100+ informes revisados, con una media
+  de 8 recomendaciones por cliente.
+- **Expedia Group**: cartera de 180+ hoteles.
+- **ESIC University**: 80+ movilidades de personal y 130.000 € en ayudas
+  gestionadas.
+- **Orange** y **N2Growth**: sin cifra publicable; sus frases se redactan sin ella.
+
+Las métricas de Payflow y Grupo Gmp figuran más abajo, entre los datos
+confirmados el 22 de julio de 2026.
+
 ### Datos confirmados por Pablo el 22 de julio de 2026
 
 Estos datos son tan autorizados como la tabla anterior y resuelven varios puntos
@@ -242,4 +257,4 @@ testimonios, línea temporal interactiva, FAQ y logotipos de empresas.
 7. Contraste AA verificado en tema claro y oscuro.
 8. Verificación real con Playwright: capturas en móvil y escritorio, ambos idiomas
    y ambos temas.
-9. Imprimir la página produce un PDF de una página bien maquetado.
+9. Imprimir la página produce un PDF bien maquetado, en las menos páginas posibles (unas tres para el CV completo), en tema claro, sin los controles de navegación y sin cortar ningún bloque a la mitad.
