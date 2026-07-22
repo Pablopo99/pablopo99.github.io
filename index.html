@@ -7,7 +7,303 @@
   <link rel="stylesheet" href="assets/css/styles.css">
 </head>
 <body>
-  <main id="contenido"></main>
+  <a class="saltar" href="#contenido" data-i18n="global.saltar">Saltar al contenido</a>
+
+  <header class="cabecera">
+    <div class="cabecera__interior">
+      <a class="cabecera__marca" href="#inicio">Pablo Cansinos</a>
+
+      <nav class="navegacion" aria-labelledby="navegacion-titulo">
+        <span class="visualmente-oculto" id="navegacion-titulo" data-i18n="nav.titulo">Secciones de la página</span>
+        <ul class="navegacion__lista">
+          <li><a href="#perfil" data-i18n="nav.perfil">Perfil</a></li>
+          <li><a href="#areas" data-i18n="nav.areas">Áreas</a></li>
+          <li><a href="#trayectoria" data-i18n="nav.trayectoria">Trayectoria</a></li>
+          <li><a href="#formacion" data-i18n="nav.formacion">Formación</a></li>
+          <li><a href="#idiomas" data-i18n="nav.idiomas">Idiomas</a></li>
+          <li><a href="#contacto" data-i18n="nav.contacto">Contacto</a></li>
+        </ul>
+      </nav>
+
+      <div class="controles">
+        <div class="conmutador" role="group" aria-labelledby="conmutador-idioma-titulo">
+          <span class="visualmente-oculto" id="conmutador-idioma-titulo" data-i18n="idioma.titulo">Idioma</span>
+          <button class="conmutador__boton" type="button" data-idioma="es" aria-pressed="true">
+            <span aria-hidden="true">ES</span>
+            <span class="visualmente-oculto" data-i18n="idioma.es">Ver la página en español</span>
+          </button>
+          <button class="conmutador__boton" type="button" data-idioma="en" aria-pressed="false">
+            <span aria-hidden="true">EN</span>
+            <span class="visualmente-oculto" data-i18n="idioma.en">Ver la página en inglés</span>
+          </button>
+        </div>
+
+        <button class="conmutador__boton conmutador__boton--tema" type="button" data-conmutar-tema>
+          <span aria-hidden="true">◐</span>
+          <span class="visualmente-oculto" data-i18n="tema.conmutar">Cambiar entre tema claro y oscuro</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+
+    <!-- ==================================================================
+         1. Inicio
+         ================================================================== -->
+    <section class="inicio" id="inicio" aria-labelledby="inicio-titulo">
+      <div class="inicio__texto">
+        <h1 class="inicio__nombre" id="inicio-titulo">Pablo Cansinos</h1>
+        <p class="inicio__cargo" data-i18n="inicio.titulo">Consultoría, Estrategia y Gestión de Proyectos</p>
+        <p class="inicio__propuesta" data-i18n="inicio.propuesta">Consultor en Madrid. Diagnóstico de negocio, adopción de inteligencia artificial y gestión de proyectos internacionales.</p>
+        <p class="inicio__acciones">
+          <a class="boton" href="#contacto" data-i18n="inicio.contacto">Hablemos</a>
+          <a class="boton boton--secundario" href="cv/Pablo_Cansinos_CV_ES.pdf" download data-i18n="inicio.descargar">Descargar CV en PDF</a>
+        </p>
+      </div>
+      <figure class="inicio__retrato">
+        <img src="assets/img/pablo.jpg" width="560" height="700" decoding="async"
+             alt="Retrato de Pablo Cansinos"
+             data-i18n="inicio.foto" data-i18n-attr="alt">
+      </figure>
+    </section>
+
+    <!-- ==================================================================
+         2. Perfil
+         ================================================================== -->
+    <section class="seccion" id="perfil" aria-labelledby="perfil-titulo">
+      <div class="seccion__etiqueta">
+        <h2 class="seccion__titulo" id="perfil-titulo" data-i18n="perfil.titulo">Perfil</h2>
+      </div>
+      <div class="seccion__cuerpo">
+        <p class="parrafo-destacado" data-i18n="perfil.parrafo1">Trabajo en AiKit, en Madrid, como Strategy Consultant &amp; AI: sesiones de diagnóstico con pequeñas y medianas empresas y revisión de los informes de recomendaciones que salen de ellas.</p>
+        <p data-i18n="perfil.parrafo2">Antes gestioné proyectos internacionales en ESIC University durante dos años y trabajé con una cartera de hoteles en Expedia Group, desde Praga.</p>
+        <p data-i18n="perfil.parrafo3">Lo que me interesa es el tramo que va del análisis a la decisión: entender cómo funciona una organización, medirla y proponer qué cambiar.</p>
+        <p data-i18n="perfil.parrafo4">Quiero seguir desarrollándome en consultoría de estrategia, transformación digital, operaciones y gestión de proyectos.</p>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         3. Áreas de especialización
+         ================================================================== -->
+    <section class="seccion" id="areas" aria-labelledby="areas-titulo">
+      <div class="seccion__etiqueta">
+        <h2 class="seccion__titulo" id="areas-titulo" data-i18n="areas.titulo">Áreas de especialización</h2>
+      </div>
+      <div class="seccion__cuerpo">
+        <ul class="areas">
+          <li class="area">
+            <h3 class="area__titulo" data-i18n="areas.consultoria.titulo">Consultoría y estrategia</h3>
+            <p class="area__texto" data-i18n="areas.consultoria.texto">Diagnóstico de la situación de una empresa y recomendaciones para quien decide. Es lo que hago hoy en AiKit con pequeñas y medianas empresas.</p>
+          </li>
+          <li class="area">
+            <h3 class="area__titulo" data-i18n="areas.procesos.titulo">Procesos y operaciones</h3>
+            <p class="area__texto" data-i18n="areas.procesos.texto">Cómo se trabaja hoy, dónde se pierde tiempo y qué se puede ordenar. Lo he hecho como analista de operaciones y de experiencia de cliente.</p>
+          </li>
+          <li class="area">
+            <h3 class="area__titulo" data-i18n="areas.proyectos.titulo">Proyectos y stakeholders</h3>
+            <p class="area__texto" data-i18n="areas.proyectos.texto">Coordinación de proyectos con varias partes implicadas y seguimiento hasta el cierre, en entornos internacionales y con instituciones socias.</p>
+          </li>
+          <li class="area">
+            <h3 class="area__titulo" data-i18n="areas.datos.titulo">Datos y negocio</h3>
+            <p class="area__texto" data-i18n="areas.datos.texto">Analizar datos para responder preguntas de negocio y seguir indicadores. Herramientas que uso: Excel, Google Analytics y Looker Studio.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         4. Trayectoria
+         ================================================================== -->
+    <section class="seccion" id="trayectoria" aria-labelledby="trayectoria-titulo">
+      <div class="seccion__etiqueta">
+        <h2 class="seccion__titulo" id="trayectoria-titulo" data-i18n="trayectoria.titulo">Trayectoria</h2>
+      </div>
+      <div class="seccion__cuerpo">
+
+        <article class="puesto">
+          <p class="puesto__fechas" data-i18n="trayectoria.aikit.fechas">mar. 2026 – actualidad</p>
+          <h3 class="puesto__cargo" data-i18n="trayectoria.aikit.cargo">Strategy Consultant &amp; AI</h3>
+          <p class="puesto__empresa">AiKit · <span data-i18n="trayectoria.aikit.lugar">Madrid</span></p>
+          <p data-i18n="trayectoria.aikit.contexto">AiKit acompaña a pequeñas y medianas empresas en la adopción de inteligencia artificial. El trabajo es de diagnóstico y asesoramiento, no de implantación técnica.</p>
+          <p data-i18n="trayectoria.aikit.contribucion">Dirijo las sesiones de diagnóstico con los equipos del cliente y reviso los informes que salen de ellas, para que cada recomendación se sostenga en lo que se ha visto en la sesión.</p>
+          <p class="puesto__evidencia" data-i18n="trayectoria.aikit.evidencia">Más de 50 sesiones de diagnóstico y más de 100 informes revisados, con una media de 8 recomendaciones por cliente.</p>
+        </article>
+
+        <article class="puesto">
+          <p class="puesto__fechas" data-i18n="trayectoria.expedia.fechas">mar. 2025 – ago. 2025</p>
+          <h3 class="puesto__cargo" data-i18n="trayectoria.expedia.cargo">Partner Success Associate — Business Performance &amp; Partner Advisory</h3>
+          <p class="puesto__empresa">Expedia Group · <span data-i18n="trayectoria.expedia.lugar">Praga</span></p>
+          <p data-i18n="trayectoria.expedia.contexto">Expedia Group trabaja con los hoteles que publican su alojamiento en la plataforma; el equipo de partner advisory es su interlocutor para el rendimiento del negocio.</p>
+          <p data-i18n="trayectoria.expedia.contribucion">Llevé una cartera de hoteles: revisión de su rendimiento en la plataforma y recomendaciones derivadas de ese análisis, en contacto directo con cada alojamiento.</p>
+          <p class="puesto__evidencia" data-i18n="trayectoria.expedia.evidencia">Cartera de más de 180 hoteles.</p>
+        </article>
+
+        <article class="puesto">
+          <p class="puesto__fechas" data-i18n="trayectoria.esic.fechas">mar. 2023 – mar. 2025</p>
+          <h3 class="puesto__cargo" data-i18n="trayectoria.esic.cargo">International Project Manager</h3>
+          <p class="puesto__empresa">ESIC University · <span data-i18n="trayectoria.esic.lugar">Madrid</span></p>
+          <p data-i18n="trayectoria.esic.contexto">El área internacional de ESIC University coordina la movilidad de estudiantes y de personal con instituciones socias de cinco continentes.</p>
+          <p data-i18n="trayectoria.esic.contribucion">Gestioné los proyectos de movilidad de principio a fin: convocatorias, coordinación con las instituciones socias, seguimiento de las ayudas y resolución de los problemas de cada caso.</p>
+          <p class="puesto__evidencia" data-i18n="trayectoria.esic.evidencia">Más de 700 estudiantes al año, más de 80 movilidades de personal y 130.000 € en ayudas gestionadas.</p>
+        </article>
+
+        <article class="puesto">
+          <p class="puesto__fechas" data-i18n="trayectoria.orange.fechas">nov. 2022 – abr. 2023</p>
+          <h3 class="puesto__cargo" data-i18n="trayectoria.orange.cargo">Sales Management Trainee</h3>
+          <p class="puesto__empresa">Orange · <span data-i18n="trayectoria.orange.lugar">Madrid</span></p>
+          <p data-i18n="trayectoria.orange.contexto">Orange es un operador de telecomunicaciones.</p>
+          <p data-i18n="trayectoria.orange.contribucion">Programa de trainee en gestión comercial, trabajando dentro del equipo de ventas.</p>
+        </article>
+
+        <h3 class="subtitulo" data-i18n="trayectoria.anteriores.titulo">Etapas anteriores</h3>
+
+        <ul class="puestos-compactos">
+          <li class="puesto-compacto">
+            <p class="puesto__fechas" data-i18n="trayectoria.gmp.fechas">dic. 2021 – jun. 2022</p>
+            <h4 class="puesto__cargo puesto__cargo--compacto" data-i18n="trayectoria.gmp.cargo">Customer Experience Analyst Trainee</h4>
+            <p class="puesto__empresa">Grupo Gmp · <span data-i18n="trayectoria.gmp.lugar">Madrid</span></p>
+            <p data-i18n="trayectoria.gmp.texto">Análisis de la experiencia de cliente. La base de usuarios creció un 27 % en dos meses.</p>
+          </li>
+          <li class="puesto-compacto">
+            <p class="puesto__fechas" data-i18n="trayectoria.payflow.fechas">ene. 2021 – jun. 2021</p>
+            <h4 class="puesto__cargo puesto__cargo--compacto" data-i18n="trayectoria.payflow.cargo">Operations Analyst Intern</h4>
+            <p class="puesto__empresa">Payflow (YC S21) · <span data-i18n="trayectoria.payflow.lugar">Madrid</span></p>
+            <p data-i18n="trayectoria.payflow.texto">Los contactos diarios por comercial pasaron de 50 a 135 al día, un aumento del 170 % medido sobre la actividad real, y la adopción de la aplicación subió del 18 % al 27 %.</p>
+          </li>
+          <li class="puesto-compacto">
+            <p class="puesto__fechas" data-i18n="trayectoria.n2growth.fechas">oct. 2019 – mar. 2020</p>
+            <h4 class="puesto__cargo puesto__cargo--compacto" data-i18n="trayectoria.n2growth.cargo">Executive Search Intern</h4>
+            <p class="puesto__empresa">N2Growth · <span data-i18n="trayectoria.n2growth.lugar">Madrid</span></p>
+            <p data-i18n="trayectoria.n2growth.texto">Prácticas en búsqueda de directivos (executive search).</p>
+          </li>
+        </ul>
+
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         5. Formación y certificaciones
+         ================================================================== -->
+    <section class="seccion" id="formacion" aria-labelledby="formacion-titulo">
+      <div class="seccion__etiqueta">
+        <h2 class="seccion__titulo" id="formacion-titulo" data-i18n="formacion.titulo">Formación y certificaciones</h2>
+      </div>
+      <div class="seccion__cuerpo">
+
+        <h3 class="subtitulo" data-i18n="formacion.academica.titulo">Formación académica</h3>
+        <p class="formacion__centro">ESIC Business &amp; Marketing School · <span data-i18n="formacion.esic.lugar">Madrid</span></p>
+
+        <h3 class="subtitulo" data-i18n="formacion.certificaciones.titulo">Certificaciones</h3>
+        <ul class="certificados">
+
+          <li class="certificado">
+            <p class="certificado__nombre">Management Consulting</p>
+            <p class="certificado__emisor">Emory University · <span data-i18n="cert.consulting.fecha">enero de 2026</span></p>
+            <p class="certificado__enlace">
+              <a href="https://coursera.org/verify/specialization/ACWOQKODWMR9" rel="noopener noreferrer" data-i18n="cert.consulting.verificar">Verificar credencial</a>
+            </p>
+          </li>
+
+          <li class="certificado">
+            <p class="certificado__nombre">AI Fundamentals for Non-Data Scientists</p>
+            <p class="certificado__emisor">University of Pennsylvania · <span data-i18n="cert.wharton.fecha">agosto de 2025</span></p>
+            <p class="certificado__enlace">
+              <a href="https://coursera.org/verify/3M8OGR61QBZB" rel="noopener noreferrer" data-i18n="cert.wharton.verificar">Verificar credencial</a>
+            </p>
+          </li>
+
+          <li class="certificado">
+            <p class="certificado__nombre">Scrum Foundation Professional Certificate (SFPC)</p>
+            <p class="certificado__emisor">Certiprof · <span data-i18n="cert.scrum.fecha">septiembre de 2025</span></p>
+          </li>
+
+          <li class="certificado">
+            <p class="certificado__nombre">Curso en transformación y modelo de negocios digitales</p>
+            <p class="certificado__emisor">Aicad Business School · <span data-i18n="cert.aicad.fecha">enero de 2023</span></p>
+            <p class="certificado__enlace"><span data-i18n="cert.aicad.codigo">Código de verificación</span>: m7x6mT3I9j</p>
+          </li>
+
+          <li class="certificado">
+            <p class="certificado__nombre">Principles of Data Analytics Professionals</p>
+            <p class="certificado__emisor">Microsoft · <span data-i18n="cert.datos.fecha">marzo de 2023</span></p>
+          </li>
+
+          <li class="certificado">
+            <p class="certificado__nombre">Principles of Business Analytics</p>
+            <p class="certificado__emisor">Microsoft · <span data-i18n="cert.analitica.fecha">marzo de 2023</span></p>
+          </li>
+
+          <li class="certificado">
+            <p class="certificado__nombre">International Leadership and Organizational Behavior</p>
+            <p class="certificado__emisor">Università Bocconi · <span data-i18n="cert.bocconi.fecha">septiembre de 2020</span></p>
+            <p class="certificado__enlace">
+              <a href="https://coursera.org/verify/HG3Y6YHQ5YHZ" rel="noopener noreferrer" data-i18n="cert.bocconi.verificar">Verificar credencial</a>
+            </p>
+          </li>
+
+          <li class="certificado">
+            <p class="certificado__nombre">Excel Completo</p>
+            <p class="certificado__emisor">Udemy · <span data-i18n="cert.excel.fecha">octubre de 2022</span></p>
+          </li>
+
+          <li class="certificado">
+            <p class="certificado__nombre">Cambridge C1 Advanced</p>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         6. Idiomas y experiencia internacional
+         ================================================================== -->
+    <section class="seccion" id="idiomas" aria-labelledby="idiomas-titulo">
+      <div class="seccion__etiqueta">
+        <h2 class="seccion__titulo" id="idiomas-titulo" data-i18n="idiomas.titulo">Idiomas y experiencia internacional</h2>
+      </div>
+      <div class="seccion__cuerpo">
+        <dl class="idiomas">
+          <div class="idioma">
+            <dt data-i18n="idiomas.espanol">Español</dt>
+            <dd data-i18n="idiomas.espanol.nivel">Nativo</dd>
+          </div>
+          <div class="idioma">
+            <dt data-i18n="idiomas.ingles">Inglés</dt>
+            <dd data-i18n="idiomas.ingles.nivel">C1, acreditado con el Cambridge C1 Advanced</dd>
+          </div>
+          <div class="idioma">
+            <dt data-i18n="idiomas.frances">Francés</dt>
+            <dd data-i18n="idiomas.frances.nivel">Nivel inicial</dd>
+          </div>
+        </dl>
+        <p data-i18n="idiomas.internacional">Experiencia internacional en Colombia, Texas y Praga. En ESIC University trabajé a diario con instituciones socias de cinco continentes.</p>
+      </div>
+    </section>
+
+    <!-- ==================================================================
+         7. Contacto
+         ================================================================== -->
+    <section class="seccion seccion--ultima" id="contacto" aria-labelledby="contacto-titulo">
+      <div class="seccion__etiqueta">
+        <h2 class="seccion__titulo" id="contacto-titulo" data-i18n="contacto.titulo">Contacto</h2>
+      </div>
+      <div class="seccion__cuerpo">
+        <p class="parrafo-destacado" data-i18n="contacto.texto">Si buscas a alguien para un puesto de consultoría, estrategia, operaciones o proyectos, escríbeme y lo hablamos.</p>
+        <ul class="contacto">
+          <li><a class="contacto__correo" href="#contacto">Escríbeme</a></li>
+          <li><a href="https://www.linkedin.com/in/pablo-cansinos-17b56214a" rel="noopener noreferrer" data-i18n="contacto.linkedin">Perfil de LinkedIn</a></li>
+          <li data-i18n="contacto.ubicacion">Madrid, España</li>
+        </ul>
+        <p class="contacto__descargas">
+          <a class="boton boton--secundario" href="cv/Pablo_Cansinos_CV_ES.pdf" download data-i18n="contacto.cv.es">CV en español (PDF)</a>
+          <a class="boton boton--secundario" href="cv/Pablo_Cansinos_CV_EN.pdf" download data-i18n="contacto.cv.en">CV en inglés (PDF)</a>
+        </p>
+      </div>
+    </section>
+
+  </main>
+
   <script src="assets/js/app.js" type="module"></script>
 </body>
 </html>

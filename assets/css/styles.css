@@ -35,7 +35,10 @@
   --color-texto: #0F2338;        /* Tinta */
   --color-texto-suave: #4E5F72;  /* Pizarra */
   --color-acento: #0F4C7A;       /* Azul Villanueva */
-  --color-borde: #CBD4DF;        /* Filete */
+  /* Filete decorativo. Contraste 1.5:1 contra el fondo: sirve para separadores
+     y reglas tipograficas, NUNCA como borde de un control interactivo
+     (boton, campo, conmutador). Para eso, --color-texto-suave o --color-acento. */
+  --color-borde: #CBD4DF;
 
   /* Tipografia */
   --fuente-titulo: "Spectral", ui-serif, Georgia, "Times New Roman", serif;
@@ -150,4 +153,500 @@ img {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+
+/* ==========================================================================
+   5. Enlaces, utilidades y estructura comun
+   ========================================================================== */
+
+a {
+  color: var(--color-acento);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Visible solo para lectores de pantalla. */
+.visualmente-oculto {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* Primer elemento enfocable del documento. */
+.saltar {
+  position: absolute;
+  top: var(--espacio-2);
+  left: var(--espacio-2);
+  z-index: 10;
+  transform: translateY(calc(-100% - var(--espacio-4)));
+  padding: var(--espacio-2) var(--espacio-4);
+  background-color: var(--color-fondo);
+  border: 1px solid var(--color-texto-suave);
+  font-size: var(--escala-2);
+  text-decoration: none;
+}
+
+.saltar:focus {
+  transform: translateY(0);
+}
+
+/* Ancho comun: la columna del contenido mas el margen de etiquetas. */
+.cabecera__interior,
+.inicio,
+.seccion {
+  max-width: var(--ancho-maximo);
+  margin-inline: auto;
+  padding-inline: var(--espacio-5);
+}
+
+/* ==========================================================================
+   6. Cabecera y navegacion
+   ========================================================================== */
+
+.cabecera {
+  border-bottom: 1px solid var(--color-borde);
+  background-color: var(--color-fondo);
+}
+
+.cabecera__interior {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espacio-3) var(--espacio-5);
+  padding-block: var(--espacio-3);
+}
+
+.cabecera__marca {
+  font-family: var(--fuente-titulo);
+  font-size: var(--escala-3);
+  color: var(--color-texto);
+  text-decoration: none;
+}
+
+.navegacion {
+  flex: 1 1 100%;
+  order: 3;
+}
+
+.navegacion__lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-2) var(--espacio-4);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--escala-1);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.navegacion__lista a {
+  color: var(--color-texto-suave);
+  text-decoration: none;
+}
+
+.navegacion__lista a:hover {
+  color: var(--color-acento);
+  text-decoration: underline;
+}
+
+.controles {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-2);
+  margin-left: auto;
+}
+
+.conmutador {
+  display: flex;
+  gap: var(--espacio-1);
+}
+
+/* El borde usa --color-texto-suave, no --color-borde: es un control. */
+.conmutador__boton {
+  min-height: 2.25rem;
+  min-width: 2.5rem;
+  padding: var(--espacio-1) var(--espacio-3);
+  border: 1px solid var(--color-texto-suave);
+  background-color: transparent;
+  color: var(--color-texto);
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--escala-1);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.conmutador__boton:hover {
+  border-color: var(--color-acento);
+  color: var(--color-acento);
+}
+
+.conmutador__boton[aria-pressed="true"] {
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+  color: var(--color-fondo);
+}
+
+.conmutador__boton--tema {
+  font-size: var(--escala-2);
+}
+
+@media (min-width: 48rem) {
+  .navegacion {
+    flex: 1 1 auto;
+    order: 0;
+  }
+
+  .navegacion__lista {
+    justify-content: flex-end;
+  }
+}
+
+/* ==========================================================================
+   7. Botones de accion
+   ========================================================================== */
+
+.boton {
+  display: inline-block;
+  padding: var(--espacio-3) var(--espacio-5);
+  background-color: var(--color-acento);
+  border: 1px solid var(--color-acento);
+  color: var(--color-fondo);
+  font-size: var(--escala-2);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+}
+
+.boton:hover {
+  text-decoration: underline;
+}
+
+.boton--secundario {
+  background-color: transparent;
+  border-color: var(--color-texto-suave);
+  color: var(--color-texto);
+}
+
+/* ==========================================================================
+   8. Inicio
+   ========================================================================== */
+
+.inicio {
+  display: grid;
+  gap: var(--espacio-6);
+  padding-block: var(--espacio-7);
+}
+
+.inicio__nombre {
+  font-size: var(--escala-6);
+  letter-spacing: -0.01em;
+}
+
+.inicio__cargo {
+  margin-top: var(--espacio-3);
+  font-size: var(--escala-4);
+  color: var(--color-acento);
+  text-wrap: balance;
+}
+
+.inicio__propuesta {
+  max-width: 34rem;
+  margin-top: var(--espacio-4);
+  font-size: var(--escala-3);
+  color: var(--color-texto-suave);
+}
+
+.inicio__acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-3);
+  margin-top: var(--espacio-5);
+}
+
+.inicio__retrato {
+  max-width: 15rem;
+}
+
+.inicio__retrato img {
+  border: 1px solid var(--color-borde);
+}
+
+@media (min-width: 48rem) {
+  .inicio {
+    grid-template-columns: minmax(0, 1fr) 15rem;
+    align-items: center;
+    gap: var(--espacio-7);
+    padding-block: var(--espacio-8);
+  }
+
+  .inicio__retrato {
+    max-width: none;
+  }
+}
+
+/* ==========================================================================
+   9. Estructura de seccion: etiqueta colgada mas columna de texto
+   ========================================================================== */
+
+.seccion {
+  display: grid;
+  gap: var(--espacio-4);
+  padding-block: var(--espacio-7);
+  border-top: 1px solid var(--color-borde);
+}
+
+.seccion--ultima {
+  padding-bottom: var(--espacio-8);
+}
+
+.seccion__titulo {
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--escala-1);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: var(--color-texto-suave);
+}
+
+.seccion__cuerpo {
+  max-width: 40rem;
+}
+
+.seccion__cuerpo > p + p {
+  margin-top: var(--espacio-4);
+}
+
+.parrafo-destacado {
+  font-size: var(--escala-4);
+  font-family: var(--fuente-titulo);
+  line-height: 1.35;
+  text-wrap: pretty;
+}
+
+.subtitulo {
+  margin-top: var(--espacio-6);
+  font-size: var(--escala-1);
+  font-family: var(--fuente-cuerpo);
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-texto-suave);
+}
+
+@media (min-width: 60rem) {
+  .seccion {
+    grid-template-columns: 12rem minmax(0, 1fr);
+    gap: var(--espacio-6);
+    padding-block: var(--espacio-8);
+  }
+
+  .seccion__etiqueta {
+    padding-top: var(--espacio-1);
+  }
+}
+
+/* ==========================================================================
+   10. Areas de especializacion
+   ========================================================================== */
+
+.areas {
+  display: grid;
+  gap: var(--espacio-5);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.area__titulo {
+  font-size: var(--escala-4);
+}
+
+.area__texto {
+  margin-top: var(--espacio-2);
+  font-size: var(--escala-2);
+  color: var(--color-texto-suave);
+}
+
+@media (min-width: 48rem) {
+  .areas {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--espacio-6) var(--espacio-5);
+  }
+}
+
+/* ==========================================================================
+   11. Trayectoria
+   ========================================================================== */
+
+.puesto {
+  padding-top: var(--espacio-5);
+}
+
+.puesto + .puesto {
+  margin-top: var(--espacio-5);
+  border-top: 1px solid var(--color-borde);
+}
+
+.puesto__fechas {
+  font-size: var(--escala-1);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-texto-suave);
+}
+
+.puesto__cargo {
+  margin-top: var(--espacio-2);
+  font-size: var(--escala-4);
+}
+
+.puesto__cargo--compacto {
+  font-size: var(--escala-3);
+  font-family: var(--fuente-titulo);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.puesto__empresa {
+  margin-top: var(--espacio-1);
+  font-size: var(--escala-2);
+  font-weight: 600;
+  color: var(--color-acento);
+}
+
+.puesto p + p {
+  margin-top: var(--espacio-3);
+}
+
+.puesto__evidencia {
+  padding-left: var(--espacio-4);
+  border-left: 2px solid var(--color-borde);
+  font-size: var(--escala-2);
+  color: var(--color-texto-suave);
+}
+
+.puestos-compactos {
+  margin: var(--espacio-4) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.puesto-compacto + .puesto-compacto {
+  margin-top: var(--espacio-5);
+  padding-top: var(--espacio-5);
+  border-top: 1px solid var(--color-borde);
+}
+
+.puesto-compacto p + p,
+.puesto-compacto h4 + p {
+  margin-top: var(--espacio-1);
+}
+
+.puesto-compacto > p:last-child {
+  margin-top: var(--espacio-2);
+  font-size: var(--escala-2);
+  color: var(--color-texto-suave);
+}
+
+/* ==========================================================================
+   12. Formacion y certificaciones
+   ========================================================================== */
+
+.formacion__centro {
+  margin-top: var(--espacio-2);
+  font-size: var(--escala-3);
+  font-weight: 600;
+}
+
+.certificados {
+  display: grid;
+  gap: var(--espacio-4);
+  margin: var(--espacio-4) 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.certificado {
+  padding-left: var(--espacio-4);
+  border-left: 1px solid var(--color-borde);
+}
+
+.certificado__nombre {
+  font-weight: 600;
+}
+
+.certificado__emisor,
+.certificado__enlace {
+  margin-top: var(--espacio-1);
+  font-size: var(--escala-2);
+  color: var(--color-texto-suave);
+}
+
+@media (min-width: 48rem) {
+  .certificados {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--espacio-5);
+  }
+}
+
+/* ==========================================================================
+   13. Idiomas
+   ========================================================================== */
+
+.idiomas {
+  display: grid;
+  gap: var(--espacio-3);
+  margin-bottom: var(--espacio-5);
+}
+
+.idioma {
+  display: grid;
+  grid-template-columns: 7rem minmax(0, 1fr);
+  gap: var(--espacio-3);
+  padding-bottom: var(--espacio-3);
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.idioma dt {
+  font-weight: 600;
+}
+
+.idioma dd {
+  color: var(--color-texto-suave);
+}
+
+/* ==========================================================================
+   14. Contacto
+   ========================================================================== */
+
+.contacto {
+  margin: var(--espacio-5) 0 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--escala-3);
+}
+
+.contacto li + li {
+  margin-top: var(--espacio-2);
+}
+
+.contacto__descargas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-3);
+  margin-top: var(--espacio-5);
 }
