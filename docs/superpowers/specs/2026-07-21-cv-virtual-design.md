@@ -150,6 +150,12 @@ de la antigua lista de pendientes.
 - **Payflow**: el **+170 %** es el aumento de contactos diarios por comercial, de
   **50 a 135 al día**, medido como resultado real, no como capacidad potencial.
   No se redacta nunca como «+170 % de ventas» ni como crecimiento de usuarios.
+- **Payflow**: la **adopción de la aplicación pasó del 18 % al 27 %**. Confirmado
+  por Pablo el 22 de julio de 2026; procede del plan de implementación y no
+  figuraba en la tabla original.
+- **GitHub**: el usuario es **`Pablopo99`**. Pablo pidió que el repositorio fuera
+  privado, pero GitHub Pages no sirve sitios desde repositorios privados en el
+  plan gratuito: queda pendiente decidir entre repo público o plan de pago.
 - **AiKit**: está en **Madrid**. Pablo no quiere poner el énfasis en que sus
   clientes sean pymes: la web habla de «empresas», sin segmentar por tamaño.
 - **Hueco de ago. 2025 a feb. 2026** (viaje por Asia): **no se menciona** en la
