@@ -18,7 +18,7 @@
 
   "inicio.titulo": "Consulting, Strategy & Project Management",
   "inicio.propuesta": "Consultant based in Madrid. Business diagnosis, AI adoption and international project management.",
-  "inicio.contacto": "Let's talk",
+  "inicio.contacto": "Let’s talk",
   "inicio.descargar": "Download CV (PDF)",
   "inicio.foto": "Portrait of Pablo Cansinos",
 
@@ -30,9 +30,9 @@
 
   "areas.titulo": "Areas of expertise",
   "areas.consultoria.titulo": "Consulting & strategy",
-  "areas.consultoria.texto": "Diagnosing a company's situation and providing recommendations for decision-makers. It's what I do today at AiKit.",
+  "areas.consultoria.texto": "Diagnosing a company’s situation and providing recommendations for decision-makers. It’s what I do today at AiKit.",
   "areas.procesos.titulo": "Processes & operations",
-  "areas.procesos.texto": "How work gets done today, where time is lost and what can be streamlined. I've done this as an operations and customer experience analyst.",
+  "areas.procesos.texto": "How work gets done today, where time is lost and what can be streamlined. I’ve done this as an operations and customer experience analyst.",
   "areas.proyectos.titulo": "Projects & stakeholders",
   "areas.proyectos.texto": "Coordinating projects with multiple stakeholders and following through to completion, in international settings and with partner institutions.",
   "areas.datos.titulo": "Data & business",
@@ -57,7 +57,7 @@
   "trayectoria.esic.fechas": "Mar 2023 – Mar 2025",
   "trayectoria.esic.cargo": "International Project Manager",
   "trayectoria.esic.lugar": "Madrid",
-  "trayectoria.esic.contexto": "ESIC University's international office coordinates student and staff mobility with partner institutions across five continents.",
+  "trayectoria.esic.contexto": "ESIC University’s international office coordinates student and staff mobility with partner institutions across five continents.",
   "trayectoria.esic.contribucion": "I managed mobility projects end to end: calls for applications, coordination with partner institutions, grant tracking and case-by-case problem-solving.",
   "trayectoria.esic.evidencia": "700+ students a year, 80+ staff mobilities and €130,000 in grants managed.",
 
@@ -115,7 +115,7 @@
   "idiomas.internacional": "International experience in Colombia, Texas and Prague. At ESIC University, I worked daily with partner institutions across five continents.",
 
   "contacto.titulo": "Contact",
-  "contacto.texto": "If you're looking for someone for a role in consulting, strategy, operations or projects, get in touch and let's talk.",
+  "contacto.texto": "If you’re looking for someone for a role in consulting, strategy, operations or projects, get in touch and let’s talk.",
   "contacto.escribeme": "Get in touch",
   "contacto.linkedin": "LinkedIn profile",
   "contacto.ubicacion": "Madrid, Spain",

@@ -1,2 +1,6 @@
 .DS_Store
 .superpowers/
+
+# Fotografia original sin optimizar: fuente local, no se sirve ni se versiona.
+# El sitio usa assets/img/pablo.jpg (derivada y optimizada).
+assets/img/pablo-original.png

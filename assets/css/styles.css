@@ -286,6 +286,7 @@ html {
   letter-spacing: 0.06em;
   line-height: 1;
   cursor: pointer;
+  touch-action: manipulation;
 }
 
 .conmutador__boton:hover {
@@ -328,6 +329,7 @@ html {
   font-weight: 600;
   letter-spacing: 0.02em;
   text-decoration: none;
+  touch-action: manipulation;
 }
 
 .boton:hover {
