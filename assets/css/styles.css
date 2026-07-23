@@ -685,9 +685,19 @@ a {
   margin-top: var(--espacio-5);
 }
 
-/* Direccion ensamblada por JavaScript junto a la etiqueta "Escribeme". */
+/* Direccion de correo ensamblada por JavaScript. El enlace de contacto es
+   ahora un icono, asi que la direccion se reserva para la impresion: oculta
+   en pantalla y visible en el PDF (ver @media print). */
 .contacto__correo-direccion {
-  color: var(--color-texto-suave);
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
 }
 
 /* ==========================================================================
@@ -815,6 +825,55 @@ html.js [data-revelar].es-visible {
   gap: var(--espacio-3) var(--espacio-5);
 }
 
+.proyecto__icono {
+  font-size: 1.15rem;
+  line-height: 1;
+}
+
+/* Enlaces representados por su logotipo (Instagram, LinkedIn, correo). */
+.icono-social {
+  display: inline-flex;
+  align-items: center;
+  color: var(--color-acento);
+}
+
+.icono-social svg {
+  width: 1.6rem;
+  height: 1.6rem;
+  fill: currentColor;
+  display: block;
+}
+
+.icono-social:hover,
+.icono-social:focus-visible {
+  color: var(--color-texto);
+}
+
+/* Texto reservado para la impresion: oculto en pantalla, visible en papel
+   (el correo y el LinkedIn deben leerse en el PDF, donde un icono no sirve). */
+.solo-impresion {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+  white-space: nowrap;
+  border: 0;
+}
+
+.contacto--iconos {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espacio-3) var(--espacio-4);
+}
+
+.contacto--iconos li + li {
+  margin-top: 0;
+}
+
 /* Salida de "Imprimir" / "Guardar como PDF": documento sobrio en tema
    claro, sin cromo de navegacion ni animaciones, en las menos paginas
    posibles sin cortar ningun bloque a la mitad.
@@ -833,6 +892,23 @@ html.js [data-revelar].es-visible {
   }
   .proyecto__resumen::after {
     content: "" !important;
+  }
+
+  /* En papel, correo y LinkedIn se muestran como texto legible (un icono
+     clicable no sirve impreso); los logotipos se ocultan. */
+  .solo-impresion,
+  .contacto__correo-direccion {
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    margin: 0 !important;
+    overflow: visible !important;
+    clip-path: none !important;
+    white-space: normal !important;
+    color: var(--color-texto-suave) !important;
+  }
+  .icono-social svg {
+    display: none !important;
   }
 
   /* Tema claro siempre, gane quien gane la especificidad: el selector de
