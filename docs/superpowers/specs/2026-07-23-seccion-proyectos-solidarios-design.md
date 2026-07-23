@@ -37,18 +37,25 @@ Colectivo solidario del que Pablo es **miembro asociado** y en el que **colabora
 la organización de los eventos** (sin cargo formal, coherente con su CV en PDF).
 Idea: «el movimiento transforma» — organizan torneos y retos solidarios, crean
 comunidad y convierten la actividad física en fondos para causas sociales.
+Presencia pública del colectivo (el antiguo *landing* ya no existe):
+- Instagram: `@almasinquietas_org`
+- LinkedIn: `https://www.linkedin.com/company/almas-inquietas/`
 
-### Proyecto 1 — Torneo de fútbol solidario
+### Proyecto 1 — Torneo de fútbol solidario (septiembre 2025)
 
-- Resumen: torneo benéfico organizado con Almas Inquietas; la recaudación se
-  destinó a una ONG.
-- **Pendiente de confirmar**: año y nombre exacto de la ONG beneficiaria
-  (Pablo mencionó «Idiorama», por verificar).
+- Torneo benéfico organizado con Almas Inquietas; la recaudación se destinó a
+  **Ideorama** (`ideorama.org`), asociación sin ánimo de lucro dedicada a
+  intervención educativa, uso responsable de las TIC y ocio saludable para jóvenes.
+- **Patrocinadores** conseguidos: Día, Telepizza y el Ayuntamiento de Pozuelo.
+- Enlace: `https://ideorama.org`.
 
-### Proyecto 2 — Torneo de pádel solidario
+### Proyecto 2 — Torneo de pádel solidario (diciembre 2025)
 
-- Resumen: análogo al de fútbol.
-- **Pendiente de confirmar**: año y ONG beneficiaria.
+- Torneo benéfico organizado con Almas Inquietas, también a beneficio de
+  **Ideorama**.
+- **Patrocinadores** conseguidos: MG Albian Motor, Padel Bularas, Blas Méndez
+  Ponce, Minigymrats, Cañas y Tapas, Día y Herbalife.
+- Enlace: `https://ideorama.org`.
 
 ### Proyecto 3 — Ride the Wave (en curso, 2026)
 
@@ -70,19 +77,21 @@ Datos **confirmados** (documento del proyecto + webs en vivo, jul 2026):
 - **Estado**: iniciativa **en marcha** (arrancó en julio de 2026). Se presenta la
   meta de 4.000 €, **sin afirmar que ya se ha recaudado**.
 
-**Enlaces propuestos** (a confirmar cuáles se muestran):
+**Enlaces que se muestran** (confirmados por Pablo):
 - Web de la ruta en vivo: `https://ride-the-wave-nine.vercel.app`
 - Contador comunitario: `https://strava-counter-almas-inquietas.vercel.app`
 - Instagram del colectivo: `@almasinquietas_org` (público)
-- Crowdfunding: pendiente de que Pablo dé la URL.
+- Crowdfunding: **no se enlaza** (Pablo no dispone de la URL).
 
-## Datos pendientes de Pablo (no se publican hasta confirmar)
+## Nombre de la sección (decidido)
 
-1. Torneos de fútbol y pádel: **años** y **ONG beneficiaria** (¿Idiorama?).
-2. **URL del crowdfunding** de Ride the Wave.
-3. Qué **enlaces** de los propuestos quiere mostrar en el CV.
-4. Nombre de la sección: se propone «Proyectos solidarios» / «Social-impact
-   projects» (alternativas: «Compromiso social», «Impacto»).
+**«Proyectos solidarios»** (ES) / **«Social-impact projects»** (EN).
+
+## Datos aún pendientes (opcionales, no bloquean la implementación)
+
+1. **URL del crowdfunding** de Ride the Wave (si aparece, se añade al proyecto 3).
+2. **Logos** de patrocinadores y fotos de los torneos: Pablo puede pasarlos; en la
+   primera versión los patrocinadores van **en texto**, no como logos.
 
 ## Datos excluidos deliberadamente (veracidad / privacidad)
 
