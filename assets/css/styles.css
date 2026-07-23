@@ -165,9 +165,10 @@ a {
   text-underline-offset: 0.2em;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+/* No usamos `scroll-behavior: smooth` global: en macOS interfiere con el
+   rebote elástico al final de la página y deja el último bloque (los botones
+   de descarga del pie) sin poder asentarse a la vista. El menú de anclas
+   salta de forma nativa, que es accesible y predecible. */
 
 /* Visible solo para lectores de pantalla. */
 .visualmente-oculto {
