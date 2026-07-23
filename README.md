@@ -72,25 +72,27 @@ tools/comprobar-i18n.mjs  Verifica la paridad de claves español/inglés.
 docs/                   Especificación, plan y capturas de verificación.
 ```
 
-Sin dependencias externas: ninguna petición a CDN, tipografías ni terceros en
-tiempo de ejecución. El correo se ensambla en JavaScript y no aparece completo en
-el HTML servido.
+Sin dependencias de CDN ni tipografías de terceros: fuentes y estilos se sirven
+desde el propio repositorio. La única petición a un tercero en tiempo de ejecución
+es la analítica anónima **GoatCounter** (`gc.zgo.at` → `pablo-cansinos.goatcounter.com`),
+sin cookies ni datos personales; el fragmento está al final de `index.html` y el
+panel privado es `https://pablo-cansinos.goatcounter.com`. El correo se ensambla en
+JavaScript y no aparece completo en el HTML servido.
 
-## Bloqueantes de publicación
+## Estado de publicación
 
-Lo que todavía impide publicar, a fecha de 23 de julio de 2026:
+**Publicado el 23 de julio de 2026** en `https://pablopo99.github.io/`. El
+repositorio `Pablopo99/pablopo99.github.io` es **público** (GitHub Pages no sirve
+desde repositorios privados en el plan gratuito, y se optó por público al ser un CV
+sin datos sensibles). GitHub Pages sirve la rama `master` desde la raíz.
+
+Salvedades vivas (no impiden que el sitio esté en línea, pero conviene resolverlas):
 
 1. **Los CV en PDF de `cv/` no incluyen AiKit.** Son los CV de 2026 anteriores a
-   la incorporación; Pablo los está actualizando. Hay que sustituirlos antes de
-   publicar.
+   la incorporación; Pablo los está actualizando. Hay que sustituirlos (mismos
+   nombres de archivo) y hacer push.
 2. **La fotografía es provisional.** `assets/img/pablo.jpg` está recortada del
    retrato disponible; pendiente de la definitiva que dé Pablo.
-3. **Hosting en GitHub Pages, decisión de privacidad pendiente.** La URL prevista
-   es `https://pablopo99.github.io/` (usuario `Pablopo99`), ya escrita en los
-   metadatos (`canonical`, `hreflang`, `og:*`). Pablo pidió el repositorio
-   **privado**, pero GitHub Pages **no sirve sitios desde repositorios privados
-   en el plan gratuito**: hay que elegir entre hacer el repositorio público o
-   contratar un plan de pago antes de poder publicar. No se compra dominio propio.
 
 Los datos que en su día estuvieron pendientes (estudiantes de ESIC, indicador de
 Payflow, ubicación de AiKit, hueco de agosto de 2025 a febrero de 2026, fechas de
@@ -98,9 +100,10 @@ las titulaciones) quedaron confirmados por Pablo el 22 de julio de 2026 y ya est
 en la web. El detalle está en la sección 6 de
 `docs/superpowers/specs/2026-07-21-cv-virtual-design.md`.
 
-## Publicar (cuando se resuelvan los bloqueantes)
+## Actualizar el sitio publicado
 
-GitHub Pages sirve la raíz del repositorio tal cual. No hay paso de compilación:
-basta con subir estos archivos a la rama configurada como fuente de Pages. El
-correo protegido, las traducciones y la hoja de impresión funcionan igual servidos
-desde Pages que en local.
+No hay paso de compilación: GitHub Pages sirve la raíz del repositorio tal cual.
+Para publicar cualquier cambio basta con `git push origin master`; Pages reconstruye
+solo en uno o dos minutos. Para reemplazar los PDF, sobrescribe los archivos de
+`cv/` conservando sus nombres y haz push. El correo protegido, las traducciones y la
+hoja de impresión funcionan igual servidos desde Pages que en local.
