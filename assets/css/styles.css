@@ -745,6 +745,76 @@ html.js [data-revelar].es-visible {
    17. Impresion
    ========================================================================== */
 
+/* ==========================================================================
+   Proyectos solidarios
+   ========================================================================== */
+
+.proyectos__enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-3) var(--espacio-5);
+  margin-top: var(--espacio-4);
+}
+
+.proyecto {
+  border-top: 1px solid var(--color-borde);
+  padding-block: var(--espacio-4);
+}
+
+.proyecto:last-of-type {
+  border-bottom: 1px solid var(--color-borde);
+}
+
+.proyecto__resumen {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--espacio-2) var(--espacio-4);
+  cursor: pointer;
+  list-style: none;
+}
+
+.proyecto__resumen::-webkit-details-marker {
+  display: none;
+}
+
+.proyecto__resumen::after {
+  content: "+";
+  margin-inline-start: auto;
+  color: var(--color-acento);
+  font-weight: 600;
+}
+
+.proyecto[open] > .proyecto__resumen::after {
+  content: "–";
+}
+
+.proyecto__nombre {
+  font-weight: 600;
+}
+
+.proyecto__fecha {
+  color: var(--color-texto-suave);
+}
+
+.proyecto__detalle {
+  margin-top: var(--espacio-3);
+}
+
+.proyecto__detalle > p + p {
+  margin-top: var(--espacio-3);
+}
+
+.proyecto__meta {
+  color: var(--color-texto-suave);
+}
+
+.proyecto__enlace {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-3) var(--espacio-5);
+}
+
 /* Salida de "Imprimir" / "Guardar como PDF": documento sobrio en tema
    claro, sin cromo de navegacion ni animaciones, en las menos paginas
    posibles sin cortar ningun bloque a la mitad.
@@ -755,6 +825,15 @@ html.js [data-revelar].es-visible {
    cuando se imprime ya esta en el HTML igual que el resto del texto y
    sale en el PDF sin necesidad de reglas adicionales. */
 @media print {
+
+  /* Los desplegables de Proyectos se imprimen abiertos para que el PDF
+     exportado muestre todo el contenido, esten o no abiertos en pantalla. */
+  .proyecto > .proyecto__detalle {
+    display: block !important;
+  }
+  .proyecto__resumen::after {
+    content: "" !important;
+  }
 
   /* Tema claro siempre, gane quien gane la especificidad: el selector de
      atributo del tema oscuro (:root[data-tema="oscuro"]) y el de
