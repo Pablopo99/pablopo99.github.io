@@ -1,0 +1,196 @@
+- generic [active] [ref=e1]:
+  - link "Saltar al contenido" [ref=e2] [cursor=pointer]:
+    - /url: "#contenido"
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "Pablo Cansinos" [ref=e5] [cursor=pointer]:
+        - /url: "#inicio"
+      - navigation "Secciones de la página" [ref=e6]:
+        - list [ref=e8]:
+          - listitem [ref=e9]:
+            - link "Perfil" [ref=e10] [cursor=pointer]:
+              - /url: "#perfil"
+          - listitem [ref=e11]:
+            - link "Áreas" [ref=e12] [cursor=pointer]:
+              - /url: "#areas"
+          - listitem [ref=e13]:
+            - link "Trayectoria" [ref=e14] [cursor=pointer]:
+              - /url: "#trayectoria"
+          - listitem [ref=e15]:
+            - link "Formación" [ref=e16] [cursor=pointer]:
+              - /url: "#formacion"
+          - listitem [ref=e17]:
+            - link "Idiomas" [ref=e18] [cursor=pointer]:
+              - /url: "#idiomas"
+          - listitem [ref=e19]:
+            - link "Contacto" [ref=e20] [cursor=pointer]:
+              - /url: "#contacto"
+      - generic [ref=e21]:
+        - group "Idioma" [ref=e22]:
+          - button "Ver la página en español" [pressed] [ref=e24] [cursor=pointer]: ES
+          - button "Ver la página en inglés" [ref=e26] [cursor=pointer]: EN
+        - button "Cambiar entre tema claro y oscuro" [ref=e28] [cursor=pointer]: ◐
+  - main [ref=e30]:
+    - region [ref=e31]:
+      - generic [ref=e32]:
+        - heading "Pablo Cansinos" [level=1] [ref=e33]
+        - paragraph [ref=e34]: Consultoría, Estrategia y Gestión de Proyectos
+        - paragraph [ref=e35]: Consultor en Madrid. Diagnóstico de negocio, adopción de inteligencia artificial y gestión de proyectos internacionales.
+        - paragraph [ref=e36]:
+          - link "Hablemos" [ref=e37] [cursor=pointer]:
+            - /url: "#contacto"
+          - link "Descargar CV en PDF" [ref=e38] [cursor=pointer]:
+            - /url: cv/Pablo_Cansinos_CV_ES.pdf
+      - figure [ref=e39]:
+        - img "Retrato de Pablo Cansinos" [ref=e40]
+    - region [ref=e41]:
+      - heading "Perfil" [level=2] [ref=e43]
+      - generic [ref=e44]:
+        - paragraph [ref=e45]: "Trabajo en AiKit, en Madrid, como Strategy Consultant & AI: ayudo a empresas a entender sus operaciones, identificar puntos de dolor y traducir esas necesidades de negocio en recomendaciones prácticas de inteligencia artificial, automatización y herramientas digitales."
+        - paragraph [ref=e46]: Antes gestioné proyectos internacionales en ESIC University durante dos años y trabajé con una cartera de hoteles en Expedia Group, desde Praga.
+        - paragraph [ref=e47]: "Lo que me interesa es el tramo que va del análisis a la decisión: entender cómo funciona una organización, medirla y proponer qué cambiar."
+        - paragraph [ref=e48]: Quiero seguir desarrollándome en consultoría de estrategia, transformación digital, operaciones y gestión de proyectos.
+    - region [ref=e49]:
+      - heading "Áreas de especialización" [level=2] [ref=e51]
+      - list [ref=e53]:
+        - listitem [ref=e54]:
+          - heading "Consultoría y estrategia" [level=3] [ref=e55]
+          - paragraph [ref=e56]: Diagnóstico de la situación de una empresa y recomendaciones para quien decide. Es lo que hago hoy en AiKit.
+        - listitem [ref=e57]:
+          - heading "Procesos y operaciones" [level=3] [ref=e58]
+          - paragraph [ref=e59]: Cómo se trabaja hoy, dónde se pierde tiempo y qué se puede ordenar. Lo he hecho como analista de operaciones y de experiencia de cliente.
+        - listitem [ref=e60]:
+          - heading "Proyectos y stakeholders" [level=3] [ref=e61]
+          - paragraph [ref=e62]: Coordinación de proyectos con varias partes implicadas y seguimiento hasta el cierre, en entornos internacionales y con instituciones socias.
+        - listitem [ref=e63]:
+          - heading "Datos y negocio" [level=3] [ref=e64]
+          - paragraph [ref=e65]: "Analizar datos para responder preguntas de negocio y seguir indicadores. Herramientas que uso: Excel, Google Analytics y Looker Studio."
+    - region [ref=e66]:
+      - heading "Trayectoria" [level=2] [ref=e68]
+      - generic [ref=e69]:
+        - article [ref=e70]:
+          - paragraph [ref=e71]: mar. 2026 – actualidad
+          - heading "Strategy Consultant & AI" [level=3] [ref=e72]
+          - paragraph [ref=e73]: AiKit · Madrid
+          - paragraph [ref=e74]: AiKit acompaña a empresas en la adopción de inteligencia artificial. El trabajo es de diagnóstico y asesoramiento, no de implantación técnica.
+          - paragraph [ref=e75]: Dirijo las sesiones de diagnóstico con los equipos del cliente y reviso los informes que salen de ellas, para que cada recomendación se sostenga en lo que se ha visto en la sesión.
+          - paragraph [ref=e76]: Más de 50 sesiones de diagnóstico y más de 100 informes revisados, con una media de 8 recomendaciones por cliente.
+        - article [ref=e77]:
+          - paragraph [ref=e78]: mar. 2025 – ago. 2025
+          - heading "Partner Success Associate — Business Performance & Partner Advisory" [level=3] [ref=e79]
+          - paragraph [ref=e80]: Expedia Group · Praga
+          - paragraph [ref=e81]: Expedia Group trabaja con los hoteles que publican su alojamiento en la plataforma; el equipo de partner advisory es su interlocutor para el rendimiento del negocio.
+          - paragraph [ref=e82]: "Llevé una cartera de hoteles: revisión de su rendimiento en la plataforma y recomendaciones derivadas de ese análisis, en contacto directo con cada alojamiento."
+          - paragraph [ref=e83]: Cartera de más de 180 hoteles.
+        - article [ref=e84]:
+          - paragraph [ref=e85]: mar. 2023 – mar. 2025
+          - heading "International Project Manager" [level=3] [ref=e86]
+          - paragraph [ref=e87]: ESIC University · Madrid
+          - paragraph [ref=e88]: El área internacional de ESIC University coordina la movilidad de estudiantes y de personal con instituciones socias de cinco continentes.
+          - paragraph [ref=e89]: "Gestioné los proyectos de movilidad de principio a fin: convocatorias, coordinación con las instituciones socias, seguimiento de las ayudas y resolución de los problemas de cada caso."
+          - paragraph [ref=e90]: Más de 700 estudiantes al año, más de 80 movilidades de personal y 130.000 € en ayudas gestionadas.
+        - article [ref=e91]:
+          - paragraph [ref=e92]: nov. 2022 – abr. 2023
+          - heading "Sales Management Trainee" [level=3] [ref=e93]
+          - paragraph [ref=e94]: Orange · Madrid
+          - paragraph [ref=e95]: Orange es un operador de telecomunicaciones.
+          - paragraph [ref=e96]: Programa de trainee en gestión comercial, trabajando dentro del equipo de ventas.
+        - heading "Etapas anteriores" [level=3] [ref=e97]
+        - list [ref=e98]:
+          - listitem [ref=e99]:
+            - paragraph [ref=e100]: dic. 2021 – jun. 2022
+            - heading "Customer Experience Analyst Trainee" [level=4] [ref=e101]
+            - paragraph [ref=e102]: Grupo Gmp · Madrid
+            - paragraph [ref=e103]: Análisis de la experiencia de cliente. La base de usuarios creció un 27 % en dos meses.
+          - listitem [ref=e104]:
+            - paragraph [ref=e105]: ene. 2021 – jun. 2021
+            - heading "Operations Analyst Intern" [level=4] [ref=e106]
+            - paragraph [ref=e107]: Payflow (YC S21) · Madrid
+            - paragraph [ref=e108]: Los contactos diarios por comercial pasaron de 50 a 135 al día, un aumento del 170 % medido sobre la actividad real, y la adopción de la aplicación subió del 18 % al 27 %.
+          - listitem [ref=e109]:
+            - paragraph [ref=e110]: oct. 2019 – mar. 2020
+            - heading "Executive Search Intern" [level=4] [ref=e111]
+            - paragraph [ref=e112]: N2Growth · Madrid
+            - paragraph [ref=e113]: Prácticas en búsqueda de directivos (executive search).
+    - region [ref=e114]:
+      - heading "Formación y certificaciones" [level=2] [ref=e116]
+      - generic [ref=e117]:
+        - heading "Formación académica" [level=3] [ref=e118]
+        - paragraph [ref=e119]: ESIC Business & Marketing School · Madrid
+        - list [ref=e120]:
+          - listitem [ref=e121]:
+            - generic [ref=e122]: Grado en Administración de Empresas en el Entorno Digital
+            - generic [ref=e123]: 2017 – 2022
+          - listitem [ref=e124]:
+            - generic [ref=e125]: Título Superior en Gestión de Marketing Global
+            - generic [ref=e126]: sept. 2017 – jun. 2022
+        - paragraph [ref=e127]: Ambas titulaciones son de programa bilingüe y se cursaron en paralelo.
+        - heading "Certificaciones" [level=3] [ref=e128]
+        - list [ref=e129]:
+          - listitem [ref=e130]:
+            - paragraph [ref=e131]: Management Consulting
+            - paragraph [ref=e132]: Emory University · enero de 2026
+            - paragraph [ref=e133]:
+              - link "Verificar credencial" [ref=e134] [cursor=pointer]:
+                - /url: https://coursera.org/verify/specialization/ACWOQKODWMR9
+          - listitem [ref=e135]:
+            - paragraph [ref=e136]: AI Fundamentals for Non-Data Scientists
+            - paragraph [ref=e137]: University of Pennsylvania · agosto de 2025
+            - paragraph [ref=e138]:
+              - link "Verificar credencial" [ref=e139] [cursor=pointer]:
+                - /url: https://coursera.org/verify/3M8OGR61QBZB
+          - listitem [ref=e140]:
+            - paragraph [ref=e141]: Scrum Foundation Professional Certificate (SFPC)
+            - paragraph [ref=e142]: Certiprof · septiembre de 2025
+          - listitem [ref=e143]:
+            - paragraph [ref=e144]: Curso en transformación y modelo de negocios digitales
+            - paragraph [ref=e145]: Aicad Business School · enero de 2023
+            - paragraph [ref=e146]: "Código de verificación: m7x6mT3I9j"
+          - listitem [ref=e147]:
+            - paragraph [ref=e148]: Principles of Data Analytics Professionals
+            - paragraph [ref=e149]: Microsoft · marzo de 2023
+          - listitem [ref=e150]:
+            - paragraph [ref=e151]: Principles of Business Analytics
+            - paragraph [ref=e152]: Microsoft · marzo de 2023
+          - listitem [ref=e153]:
+            - paragraph [ref=e154]: International Leadership and Organizational Behavior
+            - paragraph [ref=e155]: Università Bocconi · septiembre de 2020
+            - paragraph [ref=e156]:
+              - link "Verificar credencial" [ref=e157] [cursor=pointer]:
+                - /url: https://coursera.org/verify/HG3Y6YHQ5YHZ
+          - listitem [ref=e158]:
+            - paragraph [ref=e159]: Excel Completo
+            - paragraph [ref=e160]: Udemy · octubre de 2022
+          - listitem [ref=e161]:
+            - paragraph [ref=e162]: Cambridge C1 Advanced
+    - region [ref=e163]:
+      - heading "Idiomas y experiencia internacional" [level=2] [ref=e165]
+      - generic [ref=e166]:
+        - generic [ref=e167]:
+          - generic [ref=e168]:
+            - term [ref=e169]: Español
+            - definition [ref=e170]: Nativo
+          - generic [ref=e171]:
+            - term [ref=e172]: Inglés
+            - definition [ref=e173]: C1, acreditado con el Cambridge C1 Advanced
+          - generic [ref=e174]:
+            - term [ref=e175]: Francés
+            - definition [ref=e176]: Nivel inicial
+        - paragraph [ref=e177]: Experiencia internacional en Colombia, Texas y Praga. En ESIC University trabajé a diario con instituciones socias de cinco continentes.
+    - region [ref=e178]:
+      - heading "Contacto" [level=2] [ref=e180]
+      - generic [ref=e181]:
+        - paragraph [ref=e182]: Si buscas a alguien para un puesto de consultoría, estrategia, operaciones o proyectos, escríbeme y lo hablamos.
+        - list [ref=e183]:
+          - listitem [ref=e184]:
+            - link "Escríbeme cansinospablo@gmail.com" [ref=e185] [cursor=pointer]:
+              - /url: mailto:cansinospablo@gmail.com
+          - listitem [ref=e186]:
+            - link "Perfil de LinkedIn" [ref=e187] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/pablo-cansinos-17b56214a
+          - listitem [ref=e188]: Madrid, España
+        - paragraph [ref=e189]:
+          - link "CV en español (PDF)" [ref=e190] [cursor=pointer]:
+            - /url: cv/Pablo_Cansinos_CV_ES.pdf
+          - link "CV en inglés (PDF)" [ref=e191] [cursor=pointer]:
+            - /url: cv/Pablo_Cansinos_CV_EN.pdf
