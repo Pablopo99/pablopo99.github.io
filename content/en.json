@@ -40,8 +40,8 @@
 
   "trayectoria.titulo": "Experience",
 
-  "trayectoria.aikit.fechas": "Mar 2026 – Present",
-  "trayectoria.aikit.cargo": "Strategy Consultant & AI",
+  "trayectoria.aikit.fechas": "Feb 2026 – Present",
+  "trayectoria.aikit.cargo": "AI Strategy Consultant",
   "trayectoria.aikit.lugar": "Madrid",
   "trayectoria.aikit.contexto": "AiKit supports companies in adopting artificial intelligence. The work is diagnostic and advisory, not technical implementation.",
   "trayectoria.aikit.contribucion": "I lead diagnostic sessions with client teams and review the resulting reports, so every recommendation is grounded in what came up in the session.",
@@ -62,7 +62,7 @@
   "trayectoria.esic.evidencia": "700+ students a year, 80+ staff mobilities and €130,000 in grants managed.",
 
   "trayectoria.orange.fechas": "Nov 2022 – Apr 2023",
-  "trayectoria.orange.cargo": "Sales Management Trainee",
+  "trayectoria.orange.cargo": "Project & Commercial Operations Trainee (IT Area)",
   "trayectoria.orange.lugar": "Madrid",
   "trayectoria.orange.contexto": "Orange is a telecommunications operator.",
   "trayectoria.orange.contribucion": "Trainee program in sales management, working within the sales team.",
@@ -75,9 +75,9 @@
   "trayectoria.gmp.texto": "Customer experience analysis. The user base grew 27% in two months.",
 
   "trayectoria.payflow.fechas": "Jan 2021 – Jun 2021",
-  "trayectoria.payflow.cargo": "Operations Analyst Intern",
+  "trayectoria.payflow.cargo": "Operations Analyst Trainee",
   "trayectoria.payflow.lugar": "Madrid",
-  "trayectoria.payflow.texto": "Daily contacts per sales rep went from 50 to 135, a 170% increase measured against actual activity, and app adoption rose from 18% to 27%.",
+  "trayectoria.payflow.texto": "Designed a semi-automated WhatsApp acquisition process that grew the user base by 170% and raised app adoption from 18% to 27%.",
 
   "trayectoria.n2growth.fechas": "Oct 2019 – Mar 2020",
   "trayectoria.n2growth.cargo": "Executive Search Intern",
@@ -104,7 +104,7 @@
   "cert.analitica.fecha": "March 2023",
   "cert.bocconi.fecha": "September 2020",
   "cert.bocconi.verificar": "Verify credential",
-  "cert.excel.nombre": "Complete Excel",
+  "cert.excel.nombre": "Advanced Excel",
   "cert.excel.fecha": "October 2022",
 
   "idiomas.titulo": "Languages & international experience",
