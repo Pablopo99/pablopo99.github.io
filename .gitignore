@@ -1,6 +1,10 @@
 .DS_Store
 .superpowers/
 
+# Artefactos de las sesiones de Playwright (snapshots, logs, capturas): son
+# temporales de verificación, no forman parte del sitio.
+.playwright-mcp/
+
 # Fotografia original sin optimizar: fuente local, no se sirve ni se versiona.
 # El sitio usa assets/img/pablo.jpg (derivada y optimizada).
 assets/img/pablo-original.png
