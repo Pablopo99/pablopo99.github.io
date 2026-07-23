@@ -768,7 +768,7 @@ html.js [data-revelar].es-visible {
 
 .proyecto {
   border-top: 1px solid var(--color-borde);
-  padding-block: var(--espacio-4);
+  padding-block: var(--espacio-5);
 }
 
 .proyecto:last-of-type {
