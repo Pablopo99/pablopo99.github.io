@@ -764,6 +764,7 @@ html.js [data-revelar].es-visible {
   flex-wrap: wrap;
   gap: var(--espacio-3) var(--espacio-5);
   margin-top: var(--espacio-4);
+  margin-bottom: var(--espacio-5);
 }
 
 .proyecto {
