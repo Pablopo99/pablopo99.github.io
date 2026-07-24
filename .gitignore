@@ -5,6 +5,10 @@
 # temporales de verificación, no forman parte del sitio.
 .playwright-mcp/
 
+# Documentos fuente (Biblia de Almas Inquietas, materiales de Ride the Wave,
+# etc.): referencia privada para redactar, NUNCA se publican.
+fuentes/
+
 # Fotografia original sin optimizar: fuente local, no se sirve ni se versiona.
 # El sitio usa assets/img/pablo.jpg (derivada y optimizada).
 assets/img/pablo-original.png
