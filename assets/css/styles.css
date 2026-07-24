@@ -874,6 +874,32 @@ html.js [data-revelar].es-visible {
   margin-top: 0;
 }
 
+/* Fotos dentro de cada proyecto: rejilla de dos columnas que se apila en
+   pantallas estrechas. Todas las imagenes se recortan a 4:3 para que la
+   cuadricula quede regular. */
+.proyecto__fotos {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--espacio-3);
+  margin: var(--espacio-4) 0 0;
+}
+
+.proyecto__fotos img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  background: var(--color-superficie);
+}
+
+@media (max-width: 560px) {
+  .proyecto__fotos {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* Salida de "Imprimir" / "Guardar como PDF": documento sobrio en tema
    claro, sin cromo de navegacion ni animaciones, en las menos paginas
    posibles sin cortar ningun bloque a la mitad.
@@ -908,6 +934,11 @@ html.js [data-revelar].es-visible {
     color: var(--color-texto-suave) !important;
   }
   .icono-social svg {
+    display: none !important;
+  }
+
+  /* Las fotos de proyectos no se imprimen: mantienen el CV en PDF compacto. */
+  .proyecto__fotos {
     display: none !important;
   }
 
