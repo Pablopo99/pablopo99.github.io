@@ -545,6 +545,12 @@ a {
   opacity: 0.9;
 }
 
+/* Los logos cuadrados (icono, 1:1) se agrandan un poco para tener la misma
+   presencia visual que los logotipos de texto, más anchos. */
+.puesto__logo--icono {
+  height: 2rem;
+}
+
 .puesto p + p {
   margin-top: var(--espacio-3);
 }
