@@ -551,6 +551,56 @@ a {
   height: 2rem;
 }
 
+/* Prácticas universitarias plegadas: el resumen muestra el título, una fila de
+   logos (preview) y el signo +/–; al abrir se ven las prácticas en detalle. */
+.practicas {
+  margin-top: var(--espacio-6);
+}
+
+.practicas__resumen {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--espacio-3) var(--espacio-4);
+  cursor: pointer;
+  list-style: none;
+}
+
+.practicas__resumen::-webkit-details-marker {
+  display: none;
+}
+
+.practicas__resumen::after {
+  content: "+";
+  margin-inline-start: auto;
+  color: var(--color-acento);
+  font-weight: 600;
+}
+
+.practicas[open] > .practicas__resumen::after {
+  content: "–";
+}
+
+.practicas__titulo {
+  margin-top: 0;
+}
+
+.practicas__logos {
+  display: flex;
+  align-items: center;
+  gap: var(--espacio-4);
+}
+
+.practicas__logo {
+  display: inline-block;
+  height: 1.25rem;
+  width: auto;
+  background: var(--color-texto);
+  -webkit-mask: var(--logo) center / contain no-repeat;
+          mask: var(--logo) center / contain no-repeat;
+  opacity: 0.85;
+}
+
 .puesto p + p {
   margin-top: var(--espacio-3);
 }
@@ -711,6 +761,20 @@ a {
   flex-wrap: wrap;
   gap: var(--espacio-3);
   margin-top: var(--espacio-5);
+}
+
+/* Los dos botones de descarga, del mismo ancho y con el texto centrado, para
+   que queden como un par alineado. */
+.contacto__descargas .boton {
+  flex: 1 1 0;
+  min-width: 11rem;
+  max-width: 14rem;
+  text-align: center;
+}
+
+/* La ubicación se atenúa: los iconos accionables (correo, LinkedIn) mandan. */
+.contacto--iconos li:last-child {
+  color: var(--color-texto-suave);
 }
 
 /* Direccion de correo ensamblada por JavaScript. El enlace de contacto es
@@ -947,6 +1011,16 @@ html.js [data-revelar].es-visible {
   }
   .proyecto__resumen::after {
     content: "" !important;
+  }
+  /* Prácticas: en papel se imprimen abiertas, sin el +/– ni los logos. */
+  .practicas > .puestos-compactos {
+    display: block !important;
+  }
+  .practicas__resumen::after {
+    content: "" !important;
+  }
+  .practicas__logos {
+    display: none !important;
   }
 
   /* En papel, correo y LinkedIn se muestran como texto legible (un icono
