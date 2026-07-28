@@ -531,6 +531,20 @@ a {
   color: var(--color-acento);
 }
 
+/* Logotipo de empresa: se pinta con currentColor a través de una máscara,
+   así queda monocromo y sigue el tema (claro/oscuro) sin reglas extra. La
+   proporción de cada logo se fija con aspect-ratio en su atributo style. */
+.puesto__logo {
+  display: block;
+  height: 1.5rem;
+  width: auto;
+  margin-bottom: var(--espacio-2);
+  background: var(--color-texto);
+  -webkit-mask: var(--logo) left center / contain no-repeat;
+          mask: var(--logo) left center / contain no-repeat;
+  opacity: 0.9;
+}
+
 .puesto p + p {
   margin-top: var(--espacio-3);
 }
@@ -948,6 +962,11 @@ html.js [data-revelar].es-visible {
 
   /* Las fotos de proyectos no se imprimen: mantienen el CV en PDF compacto. */
   .proyecto__fotos {
+    display: none !important;
+  }
+
+  /* Los logotipos de empresa tampoco: en papel bastan los nombres en texto. */
+  .puesto__logo {
     display: none !important;
   }
 
