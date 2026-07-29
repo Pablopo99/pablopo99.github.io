@@ -629,10 +629,13 @@ a {
   margin-top: var(--espacio-1);
 }
 
-.puesto-compacto > p:last-child {
-  margin-top: var(--espacio-2);
+.puesto-compacto > .puesto__empresa ~ p {
   font-size: var(--escala-2);
   color: var(--color-texto-suave);
+}
+
+.puesto-compacto > .puesto__empresa + p {
+  margin-top: var(--espacio-2);
 }
 
 /* ==========================================================================
@@ -898,6 +901,18 @@ html.js [data-revelar].es-visible {
 
 .proyecto__fecha {
   color: var(--color-texto-suave);
+}
+
+.proyecto__estado {
+  font-size: var(--escala-1);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--color-acento);
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  padding: 0.15em 0.7em;
+  line-height: 1.5;
 }
 
 .proyecto__detalle {
